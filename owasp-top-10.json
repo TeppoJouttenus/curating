@@ -1,0 +1,23 @@
+{
+  "olpVersion" : "0.2",
+  "name" : "OWASP-Top-10",
+  "version" : "0.1",
+  "title" : "OWASP Top 10",
+  "description": "This course focuses on the most common security defects identified by the Open Web Application Security Project (OWASP)",
+  "homepage" : "https://codiscope.com",
+  "authors" : {
+    "name": "Tim Buntel"
+  },
+  "license" : "CC BY-ND",
+  "contact" : "tim@codiscope.com",
+  "sections" : [
+    {
+      "title": "Welcome to the OWASP Top 10",
+      "location": "sections/welcome.md"
+    },
+    {
+      "title": "Welcome as Video",
+      "location": "sections/welcome-video.md"
+    }
+  ]
+}
