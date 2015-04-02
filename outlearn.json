@@ -1,23 +1,19 @@
 {
   "olpVersion" : "0.2",
-  "name" : "OWASP-Top-10",
-  "version" : "0.1",
-  "title" : "OWASP Top 10",
-  "description": "This course focuses on the most common security defects identified by the Open Web Application Security Project (OWASP)",
-  "homepage" : "https://codiscope.com",
+  "name" : "OWASP",
+  "version" : "0.1.2",
+  "title" : "Capistrano",
+  "description": "Capistrano is remote multi-server automation tool that is often used for deployment. In this episode, we will first learn how to execute command line tasks in several servers, then we will deploy a Github repo on a newly fired up EC2 instance.",
+  "homepage" : "http://build-podcast.com/capistrano/",
   "authors" : {
-    "name": "Tim Buntel"
+    "name": "Sayanee"
   },
-  "license" : "CC BY-ND",
-  "contact" : "tim@codiscope.com",
+  "license" : "CC Attribution Share Alike",
+  "contact" : "sayanee@gmail.com",
   "sections" : [
     {
-      "title": "Welcome to the OWASP Top 10",
+      "title": "Overview",
       "location": "sections/welcome.md"
-    },
-    {
-      "title": "Welcome as Video",
-      "location": "sections/welcome-video.md"
     }
   ]
 }
