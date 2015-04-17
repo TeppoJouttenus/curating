@@ -1,3 +1,14 @@
+<!--
+name: OWASP-Top-10-screenshots
+version : 0.0.1
+title : "OWASP Top 10"
+description: "This course focuses on the most common security defects identified by the Open Web Application Security Project (OWASP)."
+homepage : "https://codiscope.com
+author : "Codiscope"
+license : "CC BY-ND"
+url : "tim@codiscope.com"
+-->
+
 <img src="1.png" alt="Welcome" style="width: 400px;"/>
 
 Welcome to the OWASP Top 10, Recognizing and Remediating Vulnerabilities course.
