@@ -9,4 +9,14 @@ license : "CC BY-ND"
 url : "tim@codiscope.com"
 -->
 
+<!-- @section -->
+
+# Hosted from Github
+
 <object width="400" height="50" data="https://raw.githubusercontent.com/outlearn-content/private/master/codiscope-owasp-top-10/modules/story.swf"></object>
+
+<!-- @section -->
+
+# Hosted from alternative source
+
+<object width="400" height="50" data="http://cl.ly/3p1E3S2w0I2v/story.swf"></object>
