@@ -1,10 +1,12 @@
 <!--
 name: OWASP-Top-10-flash
 version : "0.0.1"
-title : "OWASP Top 10"
+title : "OWASP Top 10 in Flash"
 description: "This course focuses on the most common security defects identified by the Open Web Application Security Project (OWASP)."
 homepage : "https://codiscope.com
 author : "Codiscope"
 license : "CC BY-ND"
 url : "tim@codiscope.com"
 -->
+
+<object width="400" height="50" data="http://cl.ly/3p1E3S2w0I2v/story.swf"></object>
