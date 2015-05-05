@@ -1,6 +1,6 @@
 <!--
 name: OWASP-Top-10-screenshots
-version : 0.0.1
+version : "0.0.1"
 title : "OWASP Top 10"
 description: "This course focuses on the most common security defects identified by the Open Web Application Security Project (OWASP)."
 homepage : "https://codiscope.com

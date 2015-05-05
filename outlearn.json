@@ -1,0 +1,30 @@
+{
+  "olpVersion" : "0.1",
+
+  "paths" : [
+    {
+      "name" : "OWASP-Top-10",
+      "title" : "OWASP Top 10",
+      "description" : "This course focuses on the most common security defects identified by the Open Web Application Security Project (OWASP)",
+      "privacy" : "public",
+      "pages" : [
+        {"title" : "Welcome", "content" : "./codiscope-owasp-top-10/context-pages/welcome.md"},
+        {"module" : "OWASP-Top-10-screenshots"},
+        {"module" : "OWASP-Top-10-flash"},
+        {"title" : "Live long and prosper", "content" : "./codiscope-owasp-top-10/context-pages/live-long.md"}
+      ]
+    }
+  ],
+
+  "modules" : [
+    {
+      "olm" : "./codiscope-owasp-top-10/modules/welcome.olm"
+    },
+    {
+      "olm" : "./codiscope-owasp-top-10/modules/flash.olm"
+    }
+  ],
+
+  "assets" : [
+  ]
+}
