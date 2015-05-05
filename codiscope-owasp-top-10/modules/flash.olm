@@ -11,17 +11,6 @@ url : "tim@codiscope.com"
 
 <!-- @section -->
 
-# Hosted from Github
+# OWASP Top 10
 
-<object width="100" height="100">
-    <param name="movie" value="https://raw.githubusercontent.com/outlearn-content/private/master/codiscope-owasp-top-10/modules/story.swf">
-    <embed src="https://raw.githubusercontent.com/outlearn-content/private/master/codiscope-owasp-top-10/modules/story.swf" width="100" height="100">
-    </embed>
-</object>
-
-
-<!-- @section -->
-
-# Hosted from alternative source
-
-<object width="400" height="50" data="http://cl.ly/3p1E3S2w0I2v/story.swf"></object>
+<iframe src="http://googledrive.com/host/0B4hKKQ37BHEJflFZbnJYQnFhUWFNaGE1VzBDaDhRQWtXLVFqanhMYy1uQ09QeHd4SXgwZW8"></iframe>
