@@ -6,7 +6,7 @@
 "description": "Learn how AngularJS makes testing a cinch removing all excuses to not use tests in your application!",
 "freshnessDate" : 2013-04-26,
 "homepage" : "http://newtriks.com/2013/04/26/how-to-test-an-angularjs-directive/",
-"author" : "Simon Bailey"
+"author" : "Simon Bailey",
 "license" : "All Rights Reserved"
 }
 -->
