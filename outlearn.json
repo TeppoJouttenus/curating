@@ -22,6 +22,9 @@
     },
     {
       "olm" : "./codiscope-owasp-top-10/modules/flash.olm"
+    },
+    {
+      "olm" : "./simon-bailey/test-angularjs-directive.md"
     }
   ],
 
