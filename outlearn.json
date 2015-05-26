@@ -10,7 +10,6 @@
       "pages" : [
         {"page" : "./codiscope-owasp-top-10/pages/welcome.md"},
         {"module" : "OWASP-Top-10-screenshots"},
-        {"module" : "OWASP-Top-10-flash"},
         {"page" : "./codiscope-owasp-top-10/pages/live-long.md"}
       ]
     }
@@ -19,9 +18,6 @@
   "modules" : [
     {
       "olm" : "./codiscope-owasp-top-10/modules/welcome.md"
-    },
-    {
-      "olm" : "./codiscope-owasp-top-10/modules/flash.md"
     },
     {
       "olm" : "./simon-bailey/test-angularjs-directive.md"
