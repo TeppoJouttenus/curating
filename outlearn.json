@@ -18,10 +18,10 @@
 
   "modules" : [
     {
-      "olm" : "./codiscope-owasp-top-10/modules/welcome.olm"
+      "olm" : "./codiscope-owasp-top-10/modules/welcome.md"
     },
     {
-      "olm" : "./codiscope-owasp-top-10/modules/flash.olm"
+      "olm" : "./codiscope-owasp-top-10/modules/flash.md"
     },
     {
       "olm" : "./simon-bailey/test-angularjs-directive.md"

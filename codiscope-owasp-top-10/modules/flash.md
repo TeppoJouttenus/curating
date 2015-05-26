@@ -5,7 +5,7 @@
 "title" : "OWASP Top 10 in Flash",
 "description": "This course focuses on the most common security defects identified by the Open Web Application Security Project (OWASP).",
 "freshnessDate" : 2015-05-01,
-"homepage" : "https://codiscope.com,
+"homepage" : "https://codiscope.com",
 "author" : "Codiscope",
 "license" : "CC BY-ND"
 }
