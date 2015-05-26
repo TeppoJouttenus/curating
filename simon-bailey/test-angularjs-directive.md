@@ -13,15 +13,15 @@
 
 <!-- @section -->
 
+### Getting started
+
 ### Overview
 
 After working with [Backbone](http://backbonejs.org/), [Meteor](http://meteor.com/), [AngularJS](http://angularjs.org/) and [Ember](http://emberjs.com/) (however, I have not dived deep into Ember yet), I feel that AngularJS is prepared the best for [Test Driven Development](http://en.wikipedia.org/wiki/Test-driven_development) (TDD). It truly makes it a cinch removing all excuses to not use tests in your application!
 
 I have had the pleasure of focusing on testing within an [AngularJS](http://angularjs.org/) client application recently and lost a small amount of time testing a [directive](http://docs.angularjs.org/guide/directive). The issue revolved around the template being located as an external html file as opposed to being included within the directive itself. There were a couple of head scratching errors that [@amscotti](https://twitter.com/amscotti) and I had whilst seeking a solution but here’s a suggested approach.
 
-[![AngularJS](https://pbs.twimg.com/profile_images/2149314222/square.png "AngularJS")](https://pbs.twimg.com/profile_images/2149314222/square.png)
 
-<!-- @section -->
 
 ### Tools
 
@@ -44,14 +44,13 @@ Two yeoman generators you may find useful are:
 
 An alternative to the manual installation routine above is to use the awesome [Boxen](http://boxen.github.com/), read more on this [here](http://newtriks.com/2013/04/16/setting-up-node-dot-js-on-boxen/).
 
-<!-- @section -->
+
 
 ### Create the project
 
 ```sh
 mkdir directive-example && cd $_
 yo angular
-
 ```
 
 Here is a further list of [AngularJS generators](https://github.com/yeoman/generator-angular#generators)
@@ -84,7 +83,6 @@ files = [
   '../test/mock/**/*.js',
   '../test/spec/**/*.js'
 ];
-
 ```
 
 **Compiling templates**
@@ -95,7 +93,6 @@ Templates need to be compiled to javascript otherwise you will get a parse error
 preprocessors = {
   'views/**/*.html': 'html2js'
 };
-
 ```
 
 **Auto watch**
@@ -114,14 +111,15 @@ Change the browser for running tests to PhantomJS:
 
 <!-- @section -->
 
+### Create your own example
+
 ### Create a directive
 
 ```javascript
 yo angular:directive albums
-
 ```
 
-<!-- @section -->
+
 
 ### Start Karma
 
@@ -133,7 +131,7 @@ You should now see that two tests have been executed successfully:
 
 `Executed 2 of 2 SUCCESS (0.284 secs / 0.015 secs)`
 
-<!-- @section -->
+
 
 ### Create a failing test
 
@@ -233,7 +231,6 @@ it("should display the correct album title for the first item in the albums list
     var list = element.find('li');
     expect(list.eq(0).text()).toBe('Memoirs of the Elephant Man');
 });
-
 ```
 
 The test fails. Let’s add the title attribute to the directives scope in [albums.js](https://github.com/newtriks/angularjs-directives-testing-project/blob/master/app/scripts/directives/albums.js):
@@ -273,7 +270,6 @@ Set an env variable to your _~/.profile_ or _~/.bash_profile_.
 which phantomjs
 export PHANTOMJS_BIN='YOUR_PATH_TO_PHANTOMJS'
 ~/.profile to reload
-
 ```
 
 **[Missing mocks error solution](https://github.com/yeoman/generator-angular#testing)**
