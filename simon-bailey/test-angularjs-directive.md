@@ -44,7 +44,7 @@ Two yeoman generators you may find useful are:
 
 An alternative to the manual installation routine above is to use the awesome [Boxen](http://boxen.github.com/), read more on this [here](http://newtriks.com/2013/04/16/setting-up-node-dot-js-on-boxen/).
 
-
+<!-- @task, "text" : "Install the tools."-->
 
 ### Create the project
 
@@ -53,7 +53,11 @@ mkdir directive-example && cd $_
 yo angular
 ```
 
+<!-- @task, "text" : "Create the project."-->
+
 Here is a further list of [AngularJS generators](https://github.com/yeoman/generator-angular#generators)
+
+
 
 <!-- @section -->
 
@@ -100,6 +104,8 @@ preprocessors = {
 This is a really cool part of Karma where you can enable watching files and then auto executing tests as you develop:
 
 `autoWatch = true;`
+
+<!-- @task, "text" : "Go through all the configuration."-->
 
 **Optional**
 
@@ -282,4 +288,5 @@ export PHANTOMJS_BIN='YOUR_PATH_TO_PHANTOMJS'
 
 *   Vojta’s (godfather of Angular TDD) [ng-directive-testing](https://github.com/vojtajina/ng-directive-testing) example.
 *   Vojta’s [presentation](http://www.youtube.com/watch?v=rB5b67Cg6bc) on testing directives.
-*   AngularJS Developers [guide](http://docs.angularjs.org/guide/index)
+
+<!-- @link, "url" : "https://docs.angularjs.org/guide/index" -->
