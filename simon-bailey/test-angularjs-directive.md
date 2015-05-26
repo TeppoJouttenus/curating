@@ -288,5 +288,4 @@ export PHANTOMJS_BIN='YOUR_PATH_TO_PHANTOMJS'
 
 *   Vojta’s (godfather of Angular TDD) [ng-directive-testing](https://github.com/vojtajina/ng-directive-testing) example.
 *   Vojta’s [presentation](http://www.youtube.com/watch?v=rB5b67Cg6bc) on testing directives.
-
-<!-- @link, "url" : "https://docs.angularjs.org/guide/index" -->
+*   AngularJS Developers [guide](http://docs.angularjs.org/guide/index)
