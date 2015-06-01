@@ -55,9 +55,7 @@ and enter your credentials.
 
 <!-- @task, "text" : "Try running \"bplay\"." -->
 
-You should now be logged in to a local build of the Yext Admin interface, running against db-test. The "bplay" alias stands for "build and play". Yext Java web applications are almost universally written using the Play! Framework.  
-
-<!-- @link, "url" : "https://www.playframework.com/documentation/1.2.7/home/", "text" : "Skim the Play! Framework website." -->
+You should now be logged in to a local build of the Yext Admin interface, running against db-test. The "bplay" alias stands for "build and play". Yext Java web applications are almost universally written using the [Play! Framework](https://www.playframework.com/documentation/1.2.7/home).  
 
 
 
