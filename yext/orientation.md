@@ -2,7 +2,7 @@
 {
 "name" : "orientation",
 "version" : "0.1",
-"title" : "Orientation",
+"title" : "Yext Orientation",
 "description": "Get started at Yext.",
 "freshnessDate" : 2015-06-01,
 "homepage" : "https://sites.google.com/a/yext.com/engineering/orientation",
@@ -16,7 +16,7 @@
 
 The primary Yext code repository is cloned on your workstation:
 
-* ~/alpha - our codebase, containing Java, Go, and Python code, development tools, configurations and binaries, managed by git [[codebase orientation](https://sites.google.com/a/yext.com/engineering/orientation/alpha)]
+> ~/alpha - our codebase, containing Java, Go, and Python code, development tools, configurations and binaries, managed by git [[codebase orientation](https://sites.google.com/a/yext.com/engineering/orientation/alpha)]
 
 Many applications come set up for you to use, which you can test by checking the [Automated Machine Setup](https://sites.google.com/a/yext.com/engineering/orientation/automated-machine-setup):  
 
@@ -29,12 +29,14 @@ Many applications come set up for you to use, which you can test by checking the
 *   [Homebrew](http://brew.sh), the OSX package manager
 *   Aliases to build and run programs from the command line: "icbm", "play", "bplay", "brun". (installed in ~/.bash_profile)
 
+<!-- @task, "text" : "Test some of the custom setups on your workstation." -->
+
 _Note_: The setup is mostly automated, but you can refer to the manual process in these documents. Do not follow these steps without talking to you mentor, as repeating some of them may cause issues: [Eclipse](https://sites.google.com/a/yext.com/engineering/orientation/setup), [Go](https://docs.google.com/a/yext.com/document/d/1fkbd6tlJITHAZArgFqVbFZwTVgNJGIIYAGH3GqM2JGY/edit#heading=h.u7faqjsfa1q), [Git](https://docs.google.com/a/yext.com/document/d/1H6Slwo5uOUEbTO-B4r6wTZtKfrSjfJTnpPPgIWRfUx0/edit#heading=h.ry6fdips40dv).
 
 ### Optional
 
-*   Syntax highlighting for Soy Templates: [https://github.com/anvie/SoyTemplate](https://www.google.com/url?q=https%3A/  /  github.com/  anvie/  SoyTemplate&sa=D&sntz=1&usg=AFrqEzcW-x89Lovw_p0qRA7ud1Jb906_SQ)
-*   [Re-map Caps-Lock to Control](http://www.google.com/url?q=http%3A/  /  sanziro.com/  2009/  05/  map-your-capslock-key-to-control.html&sa=D&sntz=1&usg=AFrqEzcb9ACoNzmLHFoXwSn4aO0BnmUNGg) - OS X supports Emacs-style shortcuts everywhere, and this makes them easier to access. For example: Ctrl-A - beginning of line, Ctrl-E - end of line, Ctrl-P - previous line, Ctrl-N - next line
+*   Syntax highlighting for Soy Templates: [https://github.com/anvie/SoyTemplate](https://github.com/anvie/SoyTemplate)
+*   [Re-map Caps-Lock to Control](http://sanziro.com/2009/05/map-your-capslock-key-to-control.html) - OS X supports Emacs-style shortcuts everywhere, and this makes them easier to access. For example: Ctrl-A - beginning of line, Ctrl-E - end of line, Ctrl-P - previous line, Ctrl-N - next line
 
 
 <!-- @section -->
@@ -47,11 +49,13 @@ Begin by opening a terminal
 $ cd ~/alpha
 $ bplay admin2
 
-Navigate to http://localhost:9005/admin2/ and enter your credentials.
+Navigate to http://localhost:9005/admin2/
+and enter your credentials.
 ```
 
 You should now be logged in to a local build of the Yext Admin interface, running against db-test. The "bplay" alias stands for "build and play". Yext Java web applications are almost universally written using the [Play! Framework](https://www.playframework.com/documentation/1.2.7/home).  
 
+<!-- @task, "text" : "Try running \"bplay\"." -->
 
 <!-- @section -->
 
@@ -65,11 +69,13 @@ To avoid having to remember the ports of all applications, as well as to simplif
 $ cd ~/alpha
 $ sudo tools/bin/haproxy_localhost.sh
 
-Navigate to http://localhost/admin2/ (assuming admin2 is still running)
+Navigate to http://localhost/admin2/
+(assuming admin2 is still running)
 ```
 
 You no longer need to remember the port of each application.  
 
+<!-- @task, "text" : "Start HAProxy." -->
 
 <!-- @section -->
 
@@ -94,6 +100,9 @@ Sometimes there are some additional tweaks if things don't work immediately:
 
 If there are issues with any of the plugins, you may want to refer to the [Eclipse Manual Setup](https://sites.google.com/a/yext.com/engineering/orientation/setup)  
 
+<!-- @task, "text" : "Set up your Eclipse workspace." -->
+
+
 <!-- @section -->
 
 ### Debug in Eclipse
@@ -108,12 +117,14 @@ This walkthrough demonstrates how to debug a running Java server using Eclipse.
 6.   Navigate to the controllers.Customers class in the admin2 project's app folder in Eclipse and set a breakpoint on one of the first lines of the **listCustomers()** function by double-clicking in the left-hand margin of the source line  
 7.   Go to   [http://localhost:9005/admin2/](http://localhost:9005/admin2/) . Log in if you haven't logged in yet. Once logged in, Eclipse should hit your breakpoint and pause.  
 
+<!-- @task, "text" : "Try debugging in Eclipse." -->
+
 
 <!-- @section -->
 
 ### Learn
 
-Here are some references for learning about Yext technology and culture.<
+Here are some references for learning about Yext technology and culture.
 
 * Learn about Yext products by completing the Certification Course
     * [View the study materials](http://yextcertification.com/) (certify/walkthrough759)  
