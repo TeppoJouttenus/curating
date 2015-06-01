@@ -29,7 +29,7 @@ Many applications come set up for you to use, which you can test by checking the
 *   [Homebrew](http://brew.sh), the OSX package manager
 *   Aliases to build and run programs from the command line: "icbm", "play", "bplay", "brun". (installed in ~/.bash_profile)
 
-<!-- @task, "text" : "Test some of the custom setups on your workstation." -->
+<!-- @task, "text" : "Test some of the applications with a custom setup on your workstation." -->
 
 _Note_: The setup is mostly automated, but you can refer to the manual process in these documents. Do not follow these steps without talking to you mentor, as repeating some of them may cause issues: [Eclipse](https://sites.google.com/a/yext.com/engineering/orientation/setup), [Go](https://docs.google.com/a/yext.com/document/d/1fkbd6tlJITHAZArgFqVbFZwTVgNJGIIYAGH3GqM2JGY/edit#heading=h.u7faqjsfa1q), [Git](https://docs.google.com/a/yext.com/document/d/1H6Slwo5uOUEbTO-B4r6wTZtKfrSjfJTnpPPgIWRfUx0/edit#heading=h.ry6fdips40dv).
 
@@ -53,9 +53,13 @@ Navigate to http://localhost:9005/admin2/
 and enter your credentials.
 ```
 
-You should now be logged in to a local build of the Yext Admin interface, running against db-test. The "bplay" alias stands for "build and play". Yext Java web applications are almost universally written using the [Play! Framework](https://www.playframework.com/documentation/1.2.7/home).  
-
 <!-- @task, "text" : "Try running \"bplay\"." -->
+
+You should now be logged in to a local build of the Yext Admin interface, running against db-test. The "bplay" alias stands for "build and play". Yext Java web applications are almost universally written using the Play! Framework.  
+
+<!-- @link, "url" : "https://www.playframework.com/documentation/1.2.7/home/", "text" : "Skim the Play! Framework website." -->
+
+
 
 <!-- @section -->
 
@@ -72,10 +76,11 @@ $ sudo tools/bin/haproxy_localhost.sh
 Navigate to http://localhost/admin2/
 (assuming admin2 is still running)
 ```
+<!-- @task, "text" : "Start HAProxy." -->
 
 You no longer need to remember the port of each application.  
 
-<!-- @task, "text" : "Start HAProxy." -->
+
 
 <!-- @section -->
 
@@ -85,9 +90,9 @@ We will apply the configuration suggested by the Workspace Mechanic plugin and t
 
 1.  Begin by increasing the amount of memory Eclipse is allowed to use
     1.  Open /Application/eclipse/Eclipse.app/Contents/MacOS/eclipse.ini
-    2.  Update -Xmx and -Xms to 1G and 4G respectively.
-3. Open Eclipse.
-4.  A pop-up appears that says "**Workspace Mechanic found issues that need your attention**." Click through to correct all of the issues.
+    2.  Update -Xmx and -Xms to 1G and 4G respectively
+3. Open Eclipse
+4.  A pop-up appears that says "**Workspace Mechanic found issues that need your attention**." Click through to correct all of the issues
 5.  Go to **File > Import > General > Existing Projects into Workspace**
 6.  Set the root directory to **~/alpha/eclipse/projects**
 7.  Click through to complete the operation
@@ -109,13 +114,13 @@ If there are issues with any of the plugins, you may want to refer to the [Eclip
 
 This walkthrough demonstrates how to debug a running Java server using Eclipse.  
 
-1.   Run admin2 as described above.  
+1.   Run admin2 as described above
 2.   In Eclipse, select the admin2 project and then open the Run -> Debug Configurations menu  
 3.   Select "Remote Java Application" and click the "New" icon  
-4.   Set the port to 8994.  
+4.   Set the port to 8994
 5.   Click "Debug"  
 6.   Navigate to the controllers.Customers class in the admin2 project's app folder in Eclipse and set a breakpoint on one of the first lines of the **listCustomers()** function by double-clicking in the left-hand margin of the source line  
-7.   Go to   [http://localhost:9005/admin2/](http://localhost:9005/admin2/) . Log in if you haven't logged in yet. Once logged in, Eclipse should hit your breakpoint and pause.  
+7.   Go to   [http://localhost:9005/admin2/](http://localhost:9005/admin2/) . Log in if you haven't logged in yet. Once logged in, Eclipse should hit your breakpoint and pause  
 
 <!-- @task, "text" : "Try debugging in Eclipse." -->
 
