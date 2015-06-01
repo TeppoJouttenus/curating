@@ -25,6 +25,9 @@
     },
     {
       "olm" : "./simon-bailey/test-angularjs-directive.md"
+    },
+    {
+      "olm" : "./yext/orientation.md"
     }
   ],
 
