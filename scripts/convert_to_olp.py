@@ -13,7 +13,7 @@ reH2Find = re.compile(r'(\n##[^#\n]+)')
 
 # Markdown links
 
-reMarkdownLinkRem = re.compile(r'\[(.+)\]\([^\)]*\)')
+reMarkdownLinkRem = re.compile(r'\[([^\]]+)\]\([^\)]*\)')
 # remove: [description](link) -> description
 reMarkdownLocalLinkRem = re.compile(r'\[(.+)\]\(#[^\)]*\)')
 # remove: [description](#local-link) -> description
@@ -26,6 +26,8 @@ reDoublebracketSingleLinkRem = re.compile(r'\[\[([^\]\|]+)\]\]')
 # remove:  [[description]] -> description
 reDoublebracketLinkRem = re.compile(r'\[\[([^\|]+)\|[^\]]+\]\]')
 # remove: [[description|link]] -> description
+reOtherLinkRem = re.compile(r'\[(.+)\]\[[^\]]*\]')
+# remove: [description][link] -> description
 reDoublebracketHTTPLink2MdLink = re.compile(r'\[\[([^\|]+)\|http([^\]]+)\]\]')
 # convert: [[description|http...]] -> [description](http...)
 
@@ -47,19 +49,17 @@ reMDNcodeOpenRep = re.compile(r'<pre class=\"brush\: js\">')
 reMDNcodeCloseRep = re.compile(r'</pre>')
 # convert: <pre> -> ```
 reMNDLocalLinkRem = re.compile(r'\[([^\]]+)\]\(/[^\)]*\)')
-# remove links of these types (used for internal links)
-# [description](#internal-link)
+# remove: [description](/internal-link) -> description
 
+# source path
 
-reMarkdownLinkRem = re.compile(r'\[(.+)\]\([^\)]*\)')
-
-reOtherLinkRem = re.compile(r'\[(.+)\]\[[^\]]*\]')
-# remove links of these types
-# [description][link]
 reImgSub = re.compile(r'<img(.+)src=\"img/tutorial/(.+)')
 # find image references of this type:
 # <img class="diagram" src="img/tutorial/tutorial_00.png">
 # and remove "img/tutorial/" from the path
+
+# Leanpub
+
 # reLeanpubCodeRemove = re.compile(r'\n(?:A|W)>([^\n])+')
 reLeanpubCodeRemove = re.compile(r'\nW>([^\n])+')
 # remove A>, W> from beginning of lines
