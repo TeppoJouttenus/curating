@@ -3,6 +3,7 @@
 # -*- coding: utf-8 -*-
 import re
 import files
+import textwrap
 
 files = files.ng_files
 
@@ -32,17 +33,7 @@ reOtherLinkRem = re.compile(r'\[(.+)\]\[[^\]]*\]')
 reDoublebracketHTTPLink2MdLink = re.compile(r'\[\[([^\|]+)\|http([^\]]+)\]\]')
 # convert: [[description|http...]] -> [description](http...)
 
-# JSDoc / ngdoc
 
-reJSDocLinkRem = re.compile(r'{@link \S+ (.+)}')
-# remove: {@link link description} -> description
-reJSDocExampleTagRem = re.compile(r'</?example[^>]*>')
-# remove: <example ... > and </example>
-reJSDocCodeOpenConvert = re.compile(r'<file name="([^"]*)">')
-# convert: <file name="index.html"> ->
-# Sample file name: index.html\n```js
-reJSDocCodeCloseConvert = re.compile(r'</file>')
-# convert: </file> -> ```
 
 # Metadata
 
@@ -77,6 +68,66 @@ reImgSub = re.compile(r'<img(.+)src=\"img/tutorial/(.+)')
 reLeanpubCodeRemove = re.compile(r'\nW>([^\n])+')
 # remove A>, W> from beginning of lines
 
+# JSDoc / ngdoc
+
+reJSDocLinkRem = re.compile(r'{@link \S+ (.+)}')
+# remove: {@link link description} -> description
+reJSDocExampleTagRem = re.compile(r'</?example[^>]*>\n')
+# remove: <example ... > and </example>
+reJSDocCodeOpenConvert = re.compile(r'<file name="([^"]*)">\n')
+# convert: <file name="index.html"> ->
+# Sample file name: index.html\n```js
+reJSDocCodeCloseConvert = re.compile(r'</file>\n')
+# convert: </file> -> ```
+# reJSDocCodeOpenRem = re.compile(r'<file name="([^"]*)">')
+# # remove: <file name="index.html">
+# reJSDocCodeCloseRem = re.compile(r'</file>')
+# # remove: </file>
+
+def cleanUpExampleCode(input):
+    '''\
+    Turn angular example code blocks into Markdown
+    '''
+
+    counter = 0
+    modifiedInput = input
+    while True:
+        # find content between <example> tags
+        startExample = modifiedInput.find('<example')
+        endExample = modifiedInput.find('</example') + 11
+        exampleBlock = modifiedInput[startExample:endExample]
+        exampleBlock = reJSDocExampleTagRem.sub(r'', exampleBlock)
+            # remove <example> tags
+        counterFile = 0
+        while True:
+            # find content between <file> tags
+            startFile = exampleBlock.find('<file')
+            endFile = exampleBlock.find('</file') + 8
+            fileBlock = exampleBlock[startFile:endFile]
+            # find the fileName and remove <file> tags
+            fileName = reJSDocCodeOpenConvert.search(exampleBlock).group(1)
+            fileBlock = reJSDocCodeOpenConvert.sub(r'',fileBlock)
+            fileBlock = reJSDocCodeCloseConvert.sub(r'',fileBlock)
+            fileBlock = textwrap.dedent(fileBlock)
+            # recreate the code with markdown syntax
+            exampleBlock = (exampleBlock[:startFile] + '\n_Example file_: `' +
+                fileName + '`\n```js\n' +
+                fileBlock + '```\n' + exampleBlock[endFile:])
+            counterFile += 1
+            if exampleBlock.find('<file') == -1 or counterFile > 100:
+                break
+
+        # recreate the code with the cleaned up exampleBlock
+        modifiedInput = modifiedInput[:startExample] + exampleBlock + modifiedInput[endExample:]
+        counter += 1
+        # modifiedInput = re.sub(reJSDocExampleTagRem, r'', modifiedInput)
+        # if modifiedInput.find('<example') == -1 or counter > 7:
+        #     break
+        if exampleBlock.find('<example') or counter > 100:
+            break
+
+    return modifiedInput
+
 def convertJSDoc2olm(oldfile, newfile, header):
     '''\
     Filter away unwanted syntax
@@ -88,7 +139,7 @@ def convertJSDoc2olm(oldfile, newfile, header):
         fileAsString = infile.read()
         fileAsString = fileAsString.split('\n',4)[4]
             # remove first 4 lines which have header info
-        fileAsString = re.sub(reJSDocLinkRem, r'\1', fileAsString)
+        fileAsString = reJSDocLinkRem.sub(r'\1', fileAsString)
         # fileAsString = re.sub(reJSDocExampleTagRem, r'', fileAsString)
         # fileAsString = re.sub(reJSDocCodeOpenConvert,
         #     r'_Example file_: \1\n```js', fileAsString)
@@ -96,32 +147,7 @@ def convertJSDoc2olm(oldfile, newfile, header):
         fileAsString = cleanUpExampleCode(fileAsString)
         outfile.write(fileAsString)
 
-def cleanUpExampleCode(input):
-    '''\
-    Turn angular example code blocks into Markdown
-    '''
 
-    counter = 0
-    modifiedInput = input
-    while True:
-        # Find a location with example code
-        start = modifiedInput.find('<example')
-        end = modifiedInput.find('</example') + 10
-        # indent code between <example> tags
-        indentedCode = "FIX THIS"
-
-        modifiedInput = modifiedInput[:start] + indentedCode + modifiedInput[end:]
-        counter += 1
-        # modifiedInput = re.sub(reJSDocExampleTagRem, r'', modifiedInput)
-        # if modifiedInput.find('<example') == -1 or counter > 7:
-        #     break
-        if counter > 2:
-            break
-        # else:
-        #     counter += 1
-        #     print counter
-
-    return modifiedInput
 
 def convert2olm(oldfile, newfile, header):
     '''\

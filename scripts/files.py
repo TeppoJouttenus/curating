@@ -5,9 +5,9 @@ ng_generalHeader = """"homepage" : "https://docs.angularjs.org/guide",
 }
 -->
 """
-ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/introduction.ngdoc',
-'outfile' : '/Users/teppo/Content/angular/modules/introduction.md',
-'header' : ''})
+# ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/introduction.ngdoc',
+# 'outfile' : '/Users/teppo/Content/angular/modules/introduction.md',
+# 'header' : ''})
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/concepts.ngdoc',
 'outfile' : '/Users/teppo/Content/angular/modules/concepts.md',
 'header' : ''})
