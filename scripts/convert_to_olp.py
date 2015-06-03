@@ -9,11 +9,11 @@ files = files.ng_files
 
 # Headers
 
-reH2Find = re.compile(r'(\n##[^#\n]+)')
-# find every line beginning with h2 header ##
+reH2Find = re.compile(r'(\n##[^#\n]+)') # find every line beginning with h2 header ##
 # reHeaderFind = re.compile(r'\n#')
-# find every line starting with # (includes come comments)
-# DANGEROUS, affects code with # comments by removing one 3
+"""find every line starting with # (includes come comments)
+ DANGEROUS, affects code with # comments by removing one #
+"""
 
 # Markdown links
 
@@ -48,19 +48,12 @@ reMDNjsxrefDoubleRem = re.compile(r'\{\{jsxref\(\"[^\"]+\", \"([^\"]+)\"\)\}\}')
 # remove: {{jsxref("Global_Objects/parseInt", "parseInt()")}} -> parseInt()
 reMDNjsxrefRem = re.compile(r'\{\{jsxref\(\"([^\"]+)\"\)\}\}')
 # remove: {{jsxref("Number")}} -> Number
-reMDNcodeOpenRep = re.compile(r'<pre class=\"brush\: js\">')
+reMDNcodeOpenConvert = re.compile(r'<pre class=\"brush\: js\">')
 # convert: <pre class="brush: js"> -> ```javascript
-reMDNcodeCloseRep = re.compile(r'</pre>')
+reMDNcodeCloseConvert = re.compile(r'</pre>')
 # convert: <pre> -> ```
 reMNDLocalLinkRem = re.compile(r'\[([^\]]+)\]\(/[^\)]*\)')
 # remove: [description](/internal-link) -> description
-
-# source path
-
-reImgSub = re.compile(r'<img(.+)src=\"img/tutorial/(.+)')
-# find image references of this type:
-# <img class="diagram" src="img/tutorial/tutorial_00.png">
-# and remove "img/tutorial/" from the path
 
 # Leanpub
 
@@ -75,58 +68,13 @@ reJSDocLinkRem = re.compile(r'{@link \S+ (.+)}')
 reJSDocExampleTagRem = re.compile(r'</?example[^>]*>\n')
 # remove: <example ... > and </example>
 reJSDocCodeOpenConvert = re.compile(r'<file name="([^"]*)">\n')
-# convert: <file name="index.html"> ->
-# Sample file name: index.html\n```js
+# convert: <file name="index.html"> -> ``` etc.
 reJSDocCodeCloseConvert = re.compile(r'</file>\n')
 # convert: </file> -> ```
-# reJSDocCodeOpenRem = re.compile(r'<file name="([^"]*)">')
-# # remove: <file name="index.html">
-# reJSDocCodeCloseRem = re.compile(r'</file>')
-# # remove: </file>
+reJSDocImgPath = re.compile(r'<img [^>]+src=\"([^\"]+)\">')
+# convert <img ... src="path"> -> <img src="github path">
 
-def cleanUpExampleCode(input):
-    '''\
-    Turn angular example code blocks into Markdown
-    '''
 
-    counter = 0
-    modifiedInput = input
-    while True:
-        # find content between <example> tags
-        startExample = modifiedInput.find('<example')
-        endExample = modifiedInput.find('</example') + 11
-        exampleBlock = modifiedInput[startExample:endExample]
-        exampleBlock = reJSDocExampleTagRem.sub(r'', exampleBlock)
-            # remove <example> tags
-        counterFile = 0
-        while True:
-            # find content between <file> tags
-            startFile = exampleBlock.find('<file')
-            endFile = exampleBlock.find('</file') + 8
-            fileBlock = exampleBlock[startFile:endFile]
-            # find the fileName and remove <file> tags
-            fileName = reJSDocCodeOpenConvert.search(exampleBlock).group(1)
-            fileBlock = reJSDocCodeOpenConvert.sub(r'',fileBlock)
-            fileBlock = reJSDocCodeCloseConvert.sub(r'',fileBlock)
-            fileBlock = textwrap.dedent(fileBlock)
-            # recreate the code with markdown syntax
-            exampleBlock = (exampleBlock[:startFile] + '\n_Example file_: `' +
-                fileName + '`\n```js\n' +
-                fileBlock + '```\n' + exampleBlock[endFile:])
-            counterFile += 1
-            if exampleBlock.find('<file') == -1 or counterFile > 100:
-                break
-
-        # recreate the code with the cleaned up exampleBlock
-        modifiedInput = modifiedInput[:startExample] + exampleBlock + modifiedInput[endExample:]
-        counter += 1
-        # modifiedInput = re.sub(reJSDocExampleTagRem, r'', modifiedInput)
-        # if modifiedInput.find('<example') == -1 or counter > 7:
-        #     break
-        if exampleBlock.find('<example') or counter > 100:
-            break
-
-    return modifiedInput
 
 def convertJSDoc2olm(oldfile, newfile, header):
     '''\
@@ -140,14 +88,48 @@ def convertJSDoc2olm(oldfile, newfile, header):
         fileAsString = fileAsString.split('\n',4)[4]
             # remove first 4 lines which have header info
         fileAsString = reJSDocLinkRem.sub(r'\1', fileAsString)
-        # fileAsString = re.sub(reJSDocExampleTagRem, r'', fileAsString)
-        # fileAsString = re.sub(reJSDocCodeOpenConvert,
-        #     r'_Example file_: \1\n```js', fileAsString)
-        # fileAsString = re.sub(reJSDocCodeCloseConvert, r'```', fileAsString)
         fileAsString = cleanUpExampleCode(fileAsString)
+        fileAsString = reJSDocImgPath.sub(r'<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/\1">', fileAsString)
         outfile.write(fileAsString)
 
+def cleanUpExampleCode(input):
+    '''\
+    Turn angular example code blocks into Markdown
+    '''
 
+    modifiedInput = input
+    while modifiedInput.find('<example') != -1: # loop over all <example> tags
+        startExample = modifiedInput.find('<example')
+        endExample = modifiedInput.find('</example') + 11
+        exampleBlock = modifiedInput[startExample:endExample]
+        exampleBlock = reJSDocExampleTagRem.sub(r'', exampleBlock)
+            # remove <example> tags from the block
+
+        while exampleBlock.find('<file') != -1:
+        # loop over all <file> tags inside the exampleBlock
+            startFile = exampleBlock.find('<file')
+            endFile = exampleBlock.find('</file') + 8
+            fileBlock = exampleBlock[startFile:endFile]
+
+            # if there is a <file> block, find the fileName and tags
+            match = reJSDocCodeOpenConvert.search(exampleBlock)
+            if match:
+                fileName = match.group(1)
+            else:
+                break
+            fileBlock = reJSDocCodeOpenConvert.sub(r'',fileBlock)
+            fileBlock = reJSDocCodeCloseConvert.sub(r'',fileBlock)
+
+            # recreate the code with markdown syntax
+            exampleBlock = (exampleBlock[:startFile] + '\n_Example file_: `' +
+                fileName + '`\n```js\n' +
+                textwrap.dedent(fileBlock) + '```\n' + exampleBlock[endFile:])
+
+        # recreate the code with the cleaned up exampleBlock
+        modifiedInput = (modifiedInput[:startExample] + exampleBlock +
+            modifiedInput[endExample:])
+
+    return modifiedInput
 
 def convert2olm(oldfile, newfile, header):
     '''\
@@ -161,8 +143,8 @@ def convert2olm(oldfile, newfile, header):
         fileAsString = re.sub(reMDNGlossaryRem, r"\1", fileAsString)
         fileAsString = re.sub(reMDNjsxrefDoubleRem, r"\1", fileAsString)
         fileAsString = re.sub(reMDNjsxrefRem, r"\1", fileAsString)
-        fileAsString = re.sub(reMDNcodeOpenRep, r"```javascript\n", fileAsString)
-        fileAsString = re.sub(reMDNcodeCloseRep, r"```", fileAsString)
+        fileAsString = re.sub(reMDNcodeOpenConvert, r"```javascript\n", fileAsString)
+        fileAsString = re.sub(reMDNcodeCloseConvert, r"```", fileAsString)
         fileAsString = re.sub(reMNDLocalLinkRem, r"\1", fileAsString)
         outfile.write(fileAsString)
 
@@ -178,8 +160,8 @@ def convertMDN_2olm(oldfile, newfile, header):
         fileAsString = re.sub(reMDNGlossaryRem, r"\1", fileAsString)
         fileAsString = re.sub(reMDNjsxrefDoubleRem, r"\1", fileAsString)
         fileAsString = re.sub(reMDNjsxrefRem, r"\1", fileAsString)
-        fileAsString = re.sub(reMDNcodeOpenRep, r"```javascript\n", fileAsString)
-        fileAsString = re.sub(reMDNcodeCloseRep, r"```", fileAsString)
+        fileAsString = re.sub(reMDNcodeOpenConvert, r"```javascript\n", fileAsString)
+        fileAsString = re.sub(reMDNcodeCloseConvert, r"```", fileAsString)
         fileAsString = re.sub(reMNDLocalLinkRem, r"\1", fileAsString)
         outfile.write(fileAsString)
 
@@ -205,6 +187,11 @@ def convertUnderstandingES6_2olm(oldfile, newfile, header):
         outfile.write(fileAsString)
 
 
+"""
+------------------------------
+Start main code body
+------------------------------
+"""
 
 for i in range(len(files)):
     convertJSDoc2olm(files[i]['infile'], files[i]['outfile'], files[i]['header'])
