@@ -9,7 +9,9 @@ files = files.ng_files
 
 # Headers
 
-reH2Find = re.compile(r'(\n##[^#\n]+)') # find every line beginning with h2 header ##
+reH2Find = re.compile(r'(\n##[^#\n]+\n)') # find every line beginning with h2 header ##
+reH1Find = re.compile(r'(\n#[^#\n]+\n)') # find every line beginning with h1 header #
+reNewlineFind = re.compile(r'\n') # find every newline
 # reHeaderFind = re.compile(r'\n#')
 """find every line starting with # (includes come comments)
  DANGEROUS, affects code with # comments by removing one #
@@ -65,16 +67,45 @@ reLeanpubCodeRemove = re.compile(r'\nW>([^\n])+')
 
 reJSDocLinkRem = re.compile(r'{@link \S+ (.+)}')
 # remove: {@link link description} -> description
+reJSDocLocalLinkRem = re.compile(r'<a name=[^>]+>([^<]+)</a>')
+# remove: {@link link description} -> description
 reJSDocExampleTagRem = re.compile(r'</?example[^>]*>\n')
 # remove: <example ... > and </example>
 reJSDocCodeOpenConvert = re.compile(r'<file name="([^"]*)">\n')
 # convert: <file name="index.html"> -> ``` etc.
 reJSDocCodeCloseConvert = re.compile(r'</file>\n')
 # convert: </file> -> ```
-reJSDocImgPath = re.compile(r'<img [^>]+src=\"([^\"]+)\">')
+reJSDocAlertConvert = re.compile(r'<div class="alert[^>]*>\n')
+# remove: <example ... > and </example>
+reJSDocImgPath = re.compile(r'<img [^>]+src=\"([^\"]+)\"[^>]*>')
 # convert <img ... src="path"> -> <img src="github path">
 
 
+
+
+
+def convertAlerts(input):
+    '''\
+    Turn angular alerts into block quotes
+    '''
+
+    modifiedInput = input
+    counter = 0;
+    while modifiedInput.find('<div class="alert') != -1 and counter < 2: # loop over all alerts tags
+        counter += 1
+        start = modifiedInput.find('<div class="alert')
+        relativeEnd = modifiedInput[start:].find('</div>') + 7
+        end = start + relativeEnd
+        alertBlock = modifiedInput[start:end]
+        alertBlock = reJSDocAlertConvert.sub(r'> ', alertBlock)
+            # remove <example> tags from the block
+        alertBlock = alertBlock[:-8] # remove </div> from the end
+        alertBlock = reNewlineFind.sub(r'\n>', alertBlock)
+        # recreate the input with cleaned up alertBlock
+        modifiedInput = (modifiedInput[:start] + alertBlock + '\n' +
+            modifiedInput[end:])
+
+    return modifiedInput
 
 def convertJSDoc2olm(oldfile, newfile, header):
     '''\
@@ -87,10 +118,15 @@ def convertJSDoc2olm(oldfile, newfile, header):
         fileAsString = infile.read()
         fileAsString = fileAsString.split('\n',4)[4]
             # remove first 4 lines which have header info
+        fileAsString = reH1Find.sub("\n\n<!-- @section -->\n" + r"\1", fileAsString)
+        fileAsString = reH2Find.sub("\n\n<!-- @section -->\n" + r"\1", fileAsString)
         fileAsString = reJSDocLinkRem.sub(r'\1', fileAsString)
+        fileAsString = reJSDocLocalLinkRem.sub(r'\1', fileAsString)
         fileAsString = cleanUpExampleCode(fileAsString)
+        fileAsString = convertAlerts(fileAsString)
         fileAsString = reJSDocImgPath.sub(r'<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/\1">', fileAsString)
         outfile.write(fileAsString)
+
 
 def cleanUpExampleCode(input):
     '''\
@@ -122,8 +158,8 @@ def cleanUpExampleCode(input):
 
             # recreate the code with markdown syntax
             exampleBlock = (exampleBlock[:startFile] + '\n_Example file_: `' +
-                fileName + '`\n```js\n' +
-                textwrap.dedent(fileBlock) + '```\n' + exampleBlock[endFile:])
+                fileName + '`\n\n```javascript\n' +
+                textwrap.dedent(fileBlock) + '```\n\n' + exampleBlock[endFile:])
 
         # recreate the code with the cleaned up exampleBlock
         modifiedInput = (modifiedInput[:startExample] + exampleBlock +
@@ -192,6 +228,7 @@ def convertUnderstandingES6_2olm(oldfile, newfile, header):
 Start main code body
 ------------------------------
 """
+
 
 for i in range(len(files)):
     convertJSDoc2olm(files[i]['infile'], files[i]['outfile'], files[i]['header'])

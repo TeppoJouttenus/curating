@@ -190,7 +190,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 'outfile' : '/Users/teppo/Content/angular/modules/$location.md',
 'header' : """<!--
 {
-"name" : "$location",
+"name" : "location",
 "version" : "0.1",
 "title" : "Using $location",
 "description" : "The $location service parses the URL in the browser address bar and makes the URL available to your application.",
