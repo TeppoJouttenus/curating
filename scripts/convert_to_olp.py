@@ -65,47 +65,27 @@ reLeanpubCodeRemove = re.compile(r'\nW>([^\n])+')
 
 # JSDoc / ngdoc
 
-reJSDocLinkRem = re.compile(r'{@link \S+ (.+)}')
+reJSDocLinkRem = re.compile(r'{@link\s+\S+\s+([^\}]+)}')
 # remove: {@link link description} -> description
 reJSDocLocalLinkRem = re.compile(r'<a name=[^>]+>([^<]+)</a>')
 # remove: {@link link description} -> description
 reJSDocExampleTagRem = re.compile(r'</?example[^>]*>\n')
 # remove: <example ... > and </example>
-reJSDocCodeOpenConvert = re.compile(r'<file name="([^"]*)">\n')
+reJSDocCodeOpenConvert = re.compile(r'<file[^>]*name="([^"]*)"[^>]*>\n')
 # convert: <file name="index.html"> -> ``` etc.
 reJSDocCodeCloseConvert = re.compile(r'</file>\n')
 # convert: </file> -> ```
 reJSDocAlertConvert = re.compile(r'<div class="alert[^>]*>\n')
 # remove: <example ... > and </example>
-reJSDocImgPath = re.compile(r'<img [^>]+src=\"([^\"]+)\"[^>]*>')
+reJSDocSpaceJsBlock = re.compile(r'\n```js')
+# remove: <example ... > and </example>
+reJSDocImgPath = re.compile(r'<img[^>]+src=\"([^\"]+)\"[^>]*>')
 # convert <img ... src="path"> -> <img src="github path">
 
 
 
 
 
-def convertAlerts(input):
-    '''\
-    Turn angular alerts into block quotes
-    '''
-
-    modifiedInput = input
-    counter = 0;
-    while modifiedInput.find('<div class="alert') != -1 and counter < 2: # loop over all alerts tags
-        counter += 1
-        start = modifiedInput.find('<div class="alert')
-        relativeEnd = modifiedInput[start:].find('</div>') + 7
-        end = start + relativeEnd
-        alertBlock = modifiedInput[start:end]
-        alertBlock = reJSDocAlertConvert.sub(r'> ', alertBlock)
-            # remove <example> tags from the block
-        alertBlock = alertBlock[:-8] # remove </div> from the end
-        alertBlock = reNewlineFind.sub(r'\n>', alertBlock)
-        # recreate the input with cleaned up alertBlock
-        modifiedInput = (modifiedInput[:start] + alertBlock + '\n' +
-            modifiedInput[end:])
-
-    return modifiedInput
 
 def convertJSDoc2olm(oldfile, newfile, header):
     '''\
@@ -124,6 +104,7 @@ def convertJSDoc2olm(oldfile, newfile, header):
         fileAsString = reJSDocLocalLinkRem.sub(r'\1', fileAsString)
         fileAsString = cleanUpExampleCode(fileAsString)
         fileAsString = convertAlerts(fileAsString)
+        fileAsString = reJSDocSpaceJsBlock.sub(r'\n\n```js', fileAsString)
         fileAsString = reJSDocImgPath.sub(r'<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/\1">', fileAsString)
         outfile.write(fileAsString)
 
@@ -164,6 +145,27 @@ def cleanUpExampleCode(input):
         # recreate the code with the cleaned up exampleBlock
         modifiedInput = (modifiedInput[:startExample] + exampleBlock +
             modifiedInput[endExample:])
+
+    return modifiedInput
+
+def convertAlerts(input):
+    '''\
+    Turn angular alerts into block quotes
+    '''
+
+    modifiedInput = input
+    while modifiedInput.find('<div class="alert') != -1: # loop over all alerts tags
+        start = modifiedInput.find('<div class="alert')
+        relativeEnd = modifiedInput[start:].find('</div>') + 7
+        end = start + relativeEnd
+        alertBlock = modifiedInput[start:end]
+        alertBlock = reJSDocAlertConvert.sub(r'> ', alertBlock)
+            # remove <example> tags from the block
+        alertBlock = alertBlock[:-8] # remove </div> from the end
+        alertBlock = reNewlineFind.sub(r'\n>', alertBlock)
+        # recreate the input with cleaned up alertBlock
+        modifiedInput = (modifiedInput[:start] + alertBlock + '\n' +
+            modifiedInput[end:])
 
     return modifiedInput
 
@@ -228,7 +230,6 @@ def convertUnderstandingES6_2olm(oldfile, newfile, header):
 Start main code body
 ------------------------------
 """
-
 
 for i in range(len(files)):
     convertJSDoc2olm(files[i]['infile'], files[i]['outfile'], files[i]['header'])

@@ -122,7 +122,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 {
 "name" : "directive",
 "version" : "0.1",
-"title" : "Scopes",
+"title" : "Directives",
 "description" : "When should you create your own directives in your AngularJS app, and how to implement them.",
 """ + ng_generalHeader})
 
