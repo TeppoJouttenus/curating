@@ -13,9 +13,13 @@
 
 <!-- @section -->
 
+| Field | Description                                            |
+| ----- | ------------------------------------------------------ |
+| name  | used for the database, must be unique for your user account or organization |
+| title | shown at the top of Path cards                         |
+| description | shown on the Path card as additional information |
 
-
-| Features / Recipe type  | Factory |
+| Features Recipe type  | Factory |
 | -- | -- |
 | can have dependencies  | used for the database, must be unique for your user account or organization |
 | uses type friendly injection | shown at the top of Path cards                         |
