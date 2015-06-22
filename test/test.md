@@ -14,9 +14,12 @@
 <!-- @section -->
 
 | Features / Recipe type | Factory | Service | Value | Constant | Provider |
-| ----- | ---- | ---- | ---- | ---- | ---- |
-| can have dependencies  | yes || yes | no | no | yes |
-|  uses type friendly injection | no | yes | yes | yes | no |
+| -----                  | ----    | ----    | ----  | ----     | ----     |
+| can have dependencies  | yes     | yes     | no    | no       | yes      |
+|  uses type friendly injection | no | yes   | yes   | yes      | no       |
+|object available in config phase | no | no  | no    | yes      | yes      |
+|can create functions    | yes     | yes     | yes   | yes      | yes      |
+|can create primitives   | yes     | no      | yes   | yes      | yes      |
 
 
 | Features Recipe type  | Factory |
