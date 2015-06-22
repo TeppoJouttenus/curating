@@ -13,7 +13,7 @@
 
 <!-- @section -->
 
-| Field | Description                                            |
+| Features / Recipe type | Description                                            |
 | ----- | ------------------------------------------------------ |
 | name  | used for the database, must be unique for your user account or organization |
 | title | shown at the top of Path cards                         |
