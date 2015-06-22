@@ -15,13 +15,13 @@
 
 | Features / Recipe type | Factory |
 | ----- | ---- |
-| name  | used for the database, must be unique for your user account or organization |
+| can have dependencies  | yes |
 | title | shown at the top of Path cards                         |
 | description | shown on the Path card as additional information |
 
 | Features Recipe type  | Factory |
 | -- | -- |
-| can have dependencies  | used for the database, must be unique for your user account or organization |
+| can have dependencies  | yes |
 | uses type friendly injection | shown at the top of Path cards                         |
 | object available in config phase | shown on the Path card as additional information |
 
