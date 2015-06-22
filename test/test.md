@@ -22,14 +22,14 @@
 |can create primitives   | yes     | no      | yes   | yes      | yes      |
 
 
-| Features Recipe type  | Factory |
-| -- | -- |
-| can have dependencies  | yes |
-| uses type friendly injection | shown at the top of Path cards                         |
-| object available in config phase | shown on the Path card as additional information |
+ Features Recipe type  | values
+ - | -
+ ca n have dependencies | yes
+ uses type friendly injection | shown at the top of Path cards
+ object available in config phase | shown on the Path card as additional information
 
 |Features / Recipe type | Factory | Service | Value | Constant | Provider |
-|---- | ---- | ---- | ---- | ---- | ---- |
+|--- | --- | --- | --- | --- | --- |
 |can have dependencies | yes | yes | no | no | yes |
 |uses type friendly injection | no | yes | yes | yes | no |
 |object available in config phase | no | no | no | yes | yes |
