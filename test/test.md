@@ -13,11 +13,11 @@
 
 <!-- @section -->
 
-| Features / Recipe type | Factory |
-| ----- | ---- |
-| can have dependencies  | yes |
-|  uses type friendly injection | no |
-| description | shown on the Path card as additional information |
+| Features / Recipe type | Factory | Service | Value | Constant | Provider |
+| ----- | ---- | ---- | ---- | ---- | ---- |
+| can have dependencies  | yes || yes | no | no | yes |
+|  uses type friendly injection | no | yes | yes | yes | no |
+
 
 | Features Recipe type  | Factory |
 | -- | -- |
