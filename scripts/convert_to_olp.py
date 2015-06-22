@@ -68,17 +68,17 @@ reLeanpubCodeRemove = re.compile(r'\nW>([^\n])+')
 reJSDocLinkRem = re.compile(r'{@link\s+\S+\s+([^\}]+)}')
 # remove: {@link link description} -> description
 reJSDocLocalLinkRem = re.compile(r'<a name=[^>]+>([^<]+)</a>')
-# remove: {@link link description} -> description
+# remove: <a name=linkname>description</a> -> description
 reJSDocExampleTagRem = re.compile(r'</?example[^>]*>\n')
 # remove: <example ... > and </example>
 reJSDocCodeOpenConvert = re.compile(r'<file[^>]*name="([^"]*)"[^>]*>\n')
 # convert: <file name="index.html"> -> ``` etc.
 reJSDocCodeCloseConvert = re.compile(r'</file>\n')
 # convert: </file> -> ```
-reJSDocAlertConvert = re.compile(r'<div class="alert[^>]*>\n')
-# remove: <example ... > and </example>
+reJSDocAlertConvert = re.compile(r'\n<div class="alert[^>]*>\n')
+# remove: \n<div class="alert" ... >, only when it starts the line
 reJSDocSpaceJsBlock = re.compile(r'\n```js')
-# remove: <example ... > and </example>
+# convert: \n```js -> \n\n```js
 reJSDocImgPath = re.compile(r'<img[^>]+src=\"([^\"]+)\"[^>]*>')
 # convert <img ... src="path"> -> <img src="github path">
 
@@ -102,8 +102,10 @@ def convertJSDoc2olm(oldfile, newfile, header):
         fileAsString = reH2Find.sub("\n\n<!-- @section -->\n" + r"\1", fileAsString)
         fileAsString = reJSDocLinkRem.sub(r'\1', fileAsString)
         fileAsString = reJSDocLocalLinkRem.sub(r'\1', fileAsString)
-        fileAsString = cleanUpExampleCode(fileAsString)
         fileAsString = convertAlerts(fileAsString)
+            # convertAlerts before cleanUpExampleCode so that
+            # alerts inside code don't get dedented and then removed
+        fileAsString = cleanUpExampleCode(fileAsString)
         fileAsString = reJSDocSpaceJsBlock.sub(r'\n\n```js', fileAsString)
         fileAsString = reJSDocImgPath.sub(r'<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/\1">', fileAsString)
         outfile.write(fileAsString)
@@ -154,15 +156,16 @@ def convertAlerts(input):
     '''
 
     modifiedInput = input
-    while modifiedInput.find('<div class="alert') != -1: # loop over all alerts tags
-        start = modifiedInput.find('<div class="alert')
+    while modifiedInput.find('\n<div class="alert') != -1: # loop over all alerts tags
+        start = modifiedInput.find('\n<div class="alert')
         relativeEnd = modifiedInput[start:].find('</div>') + 7
         end = start + relativeEnd
         alertBlock = modifiedInput[start:end]
-        alertBlock = reJSDocAlertConvert.sub(r'> ', alertBlock)
-            # remove <example> tags from the block
+        alertBlock = reJSDocAlertConvert.sub(r'\n ', alertBlock)
+            # remove <div class="alert"> tags from the block
         alertBlock = alertBlock[:-8] # remove </div> from the end
         alertBlock = reNewlineFind.sub(r'\n>', alertBlock)
+            # when there are paragraphs inside alertBlock, make them all part of the block quote block
         # recreate the input with cleaned up alertBlock
         modifiedInput = (modifiedInput[:start] + alertBlock + '\n' +
             modifiedInput[end:])
