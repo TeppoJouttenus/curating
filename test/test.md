@@ -16,7 +16,7 @@
 | Features / Recipe type | Factory |
 | ----- | ---- |
 | can have dependencies  | yes |
-| title | shown at the top of Path cards                         |
+|  uses type friendly injection | no |
 | description | shown on the Path card as additional information |
 
 | Features Recipe type  | Factory |
