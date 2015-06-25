@@ -65,6 +65,8 @@ reLeanpubCodeRemove = re.compile(r'\nW>([^\n])+')
 
 # JSDoc / ngdoc
 
+reJSDocOneWordLinkRem = re.compile(r'{@link\s+([^\}\s]+)}')
+# remove: {@link OneWordTopic} -> OneWordTopic
 reJSDocLinkRem = re.compile(r'{@link\s+\S+\s+([^\}]+)}')
 # remove: {@link link description} -> description
 reJSDocLocalLinkRem = re.compile(r'<a name=[^>]+>([^<]+)</a>')
@@ -79,12 +81,10 @@ reJSDocAlertConvert = re.compile(r'\n<div class="alert[^>]*>\n')
 # remove: \n<div class="alert" ... >, only when it starts the line
 reJSDocSpaceJsBlock = re.compile(r'\n```js')
 # convert: \n```js -> \n\n```js
+reJSDocSpaceHtmlBlock = re.compile(r'\n```html')
+# convert: \n```html -> \n\n```html
 reJSDocImgPath = re.compile(r'<img[^>]+src=\"([^\"]+)\"[^>]*>')
 # convert <img ... src="path"> -> <img src="github path">
-
-
-
-
 
 
 def convertJSDoc2olm(oldfile, newfile, header):
@@ -100,6 +100,7 @@ def convertJSDoc2olm(oldfile, newfile, header):
             # remove first 4 lines which have header info
         fileAsString = reH1Find.sub("\n\n<!-- @section -->\n" + r"\1", fileAsString)
         fileAsString = reH2Find.sub("\n\n<!-- @section -->\n" + r"\1", fileAsString)
+        fileAsString = reJSDocOneWordLinkRem.sub(r'\1', fileAsString)
         fileAsString = reJSDocLinkRem.sub(r'\1', fileAsString)
         fileAsString = reJSDocLocalLinkRem.sub(r'\1', fileAsString)
         fileAsString = convertAlerts(fileAsString)
@@ -107,6 +108,7 @@ def convertJSDoc2olm(oldfile, newfile, header):
             # alerts inside code don't get dedented and then removed
         fileAsString = cleanUpExampleCode(fileAsString)
         fileAsString = reJSDocSpaceJsBlock.sub(r'\n\n```js', fileAsString)
+        fileAsString = reJSDocSpaceHtmlBlock.sub(r'\n\n```html', fileAsString)
         fileAsString = reJSDocImgPath.sub(r'<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/\1">', fileAsString)
         outfile.write(fileAsString)
 
