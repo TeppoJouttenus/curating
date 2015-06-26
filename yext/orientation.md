@@ -16,7 +16,7 @@
 
 The primary Yext code repository is cloned on your workstation:
 
-> ~/alpha - our codebase, containing Java, Go, and Python code, development tools, configurations and binaries, managed by git [[codebase orientation](https://sites.google.com/a/yext.com/engineering/orientation/alpha)]
+> ~/alpha - our codebase, containing Java, Go, and Python code, development tools, configurations and binaries, managed by git [[codebase orientation](https://pilot.outlearn.com/learn/demo-organization/yext-path/3)]
 
 Many applications come set up for you to use, which you can test by checking the [Automated Machine Setup](https://sites.google.com/a/yext.com/engineering/orientation/automated-machine-setup):  
 
@@ -37,7 +37,7 @@ _Note_: The setup is mostly automated, but you can refer to the manual process i
 
 <!-- @link, "url" : "https://github.com/anvie/SoyTemplate", "text": "Read about syntax highlighting for Soy Templates" -->
 
-<!-- @link, "url" : "http://sanziro.com/2009/05/map-your-capslock-key-to-control.html", "text": "Read about Emacs-style shortcuts everywhere for OS X" --> 
+<!-- @link, "url" : "http://sanziro.com/2009/05/map-your-capslock-key-to-control.html", "text": "Read about Emacs-style shortcuts everywhere for OS X" -->
 
 
 
@@ -135,7 +135,7 @@ Here are some references for learning about Yext technology and culture.
 * Learn about Yext products by completing the Certification Course
     * [View the study materials](http://yextcertification.com/) (certify/walkthrough759)  
     * [Take the exam](http://bit.ly/yext_internal_certification)  
-* Read about our [development workflow](https://sites.google.com/a/yext.com/engineering/orientation/development-workflow). Print the [Quick Start Reference](https://sites.google.com/a/yext.com/engineering/orientation/quick-start) and keep it on your desk.  
+* Read about our [development workflow](https://pilot.outlearn.com/learn/demo-organization/yext-path/2). Print the [Quick Start Reference](https://sites.google.com/a/yext.com/engineering/orientation/quick-start) and keep it on your desk.  
 * Read about our [System Architecture](https://docs.google.com/a/yext.com/document/d/1GYDCnqPRChK6bUj1JMCF3S5us7Wk2zFsfIuomqewNcw/edit), and watch a [video](https://bluejeans.com/s/88FA) presentation on it.
 * Complete the [SQL/Hibernate Self-study course](https://sites.google.com/a/yext.com/sql-hibernate-self-study-program/)
 * Refer to the [Play! Framework documentation](http://www.playframework.com/documentation/1.2.7/  home) to understand how our Java web applications are structured.
@@ -145,7 +145,7 @@ Here are some references for learning about Yext technology and culture.
     *   Videos - In Finder, go to Go | Connect to Server... (⌘K), and enter "smb://storage.office.yext.com/public/Yext Systems Brown Bags".
     *   [View the slides](https://drive.google.com/a/yext.com/folderview?id=0B5HtOs07jQaNUWRRQVpoLTU4ZGc&usp=sharing).
 *   How [Javascript Compilation](https://sites.google.com/a/yext.com/engineering/tech/javascript-compilation) works at Yext, and what you should do before committing JS code.
-*   Refer to this [directory of the codebase](https://sites.google.com/a/yext.com/engineering/orientation/alpha) for easier navigation.
+*   Refer to this [directory of the codebase](https://pilot.outlearn.com/learn/demo-organization/yext-path/3) for easier navigation.
 
 
 ### Links
