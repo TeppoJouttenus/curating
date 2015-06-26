@@ -7,6 +7,6 @@ The first module gives you an overview of our toolset, the next one reviews how 
 If you have any feedback about this path, please let me know using the feedback bar at the right or just come chat with me. I want to continue to improve the path to make sure it's super helpful for new folks joining Yext.
 
 Hope you have fun!
-Sean 
+Sean
 
-<img src="https://media.licdn.com/media/p/3/000/06b/219/2ae694f.jpg" alt="Shield" style="width:250px;height:250px" align="left">
+<img src="https://media.licdn.com/media/p/3/000/06b/219/2ae694f.jpg" alt="Shield" style="width:150px;height:150px" align="left">
