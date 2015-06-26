@@ -35,8 +35,11 @@ _Note_: The setup is mostly automated, but you can refer to the manual process i
 
 ### Optional
 
-*   Syntax highlighting for Soy Templates: [https://github.com/anvie/SoyTemplate](https://github.com/anvie/SoyTemplate)
-*   [Re-map Caps-Lock to Control](http://sanziro.com/2009/05/map-your-capslock-key-to-control.html) - OS X supports Emacs-style shortcuts everywhere, and this makes them easier to access. For example: Ctrl-A - beginning of line, Ctrl-E - end of line, Ctrl-P - previous line, Ctrl-N - next line
+<!-- @link, "url" : "https://github.com/anvie/SoyTemplate", "text": "Read about syntax highlighting for Soy Templates" -->
+
+<!-- @link, "url" : "http://sanziro.com/2009/05/map-your-capslock-key-to-control.html", "text": "Read about Emacs-style shortcuts everywhere for OS X" --> 
+
+
 
 
 <!-- @section -->

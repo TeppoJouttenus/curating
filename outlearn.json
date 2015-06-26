@@ -13,6 +13,19 @@
         {"module" : "OWASP-Top-10-flash"},
         {"page" : "./codiscope-owasp-top-10/pages/live-long.md"}
       ]
+    },
+    {
+      "name" : "yext-path",
+      "title" : "Yext Engineering Orientation",
+      "description" : "Get up to speed quickly at Yext.",
+      "privacy" : "public",
+      "coverImage" : "https://pixabay.com/get/7b3f825b9fa9772f8d31/1435320062/treasure-map-153425_1280.png?direct",
+      "pages" : [
+        {"page" : "./yext/welcome.md"},
+        {"module" : "orientation"},
+        {"module" : "development-workflow"},
+        {"module" : "alpha"}
+      ]
     }
   ],
 
@@ -22,6 +35,7 @@
     {"olm" : "./simon-bailey/test-angularjs-directive.md"},
     {"olm" : "./yext/orientation.md"},
     {"olm" : "./yext/development-workflow.md"},
+    {"olm" : "./yext/alpha.md"},
     {"olm" : "./test/test.md"}
   ],
 
