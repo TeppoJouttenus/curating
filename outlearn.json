@@ -21,6 +21,7 @@
     {"olm" : "./codiscope-owasp-top-10/modules/flash.md"},
     {"olm" : "./simon-bailey/test-angularjs-directive.md"},
     {"olm" : "./yext/orientation.md"},
+    {"olm" : "./yext/development-workflow.md"},
     {"olm" : "./test/test.md"}
   ],
 
