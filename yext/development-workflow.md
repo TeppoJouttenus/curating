@@ -82,7 +82,7 @@ My changelist:
 * has been self-reviewed
 * has been tested
 
-<!-- @task, "hasDeliverable" : true, "text" : "Find an earlier code submission and check if it fulfils the changelist criteria. Write short comments about the changelist and submit them here."-->
+<!-- @task, "hasDeliverable" : true, "text" : "Find an earlier code submission and check if it fulfills the changelist criteria. Write short comments about the changelist and submit them here."-->
 
 
 The code reviewer **should** address the following points
