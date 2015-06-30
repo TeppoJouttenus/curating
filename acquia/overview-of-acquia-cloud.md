@@ -12,11 +12,7 @@
 
 <!-- @section -->
 
-
-Lessons - Acquia Cloud for Developers V2  Course
-
-
-### Learning Objectives
+## Learning Objectives
 
  By the end of this module, learners will have:
 
@@ -27,6 +23,8 @@ Lessons - Acquia Cloud for Developers V2  Course
 * A high level overview of platform best practices and suggested workflows
 
 * How Acquia hosting is different as compared to other popular hosting providers.
+
+<!-- @section -->
 
 ## Lesson 1.1 -  Introduction and overview of Acquia Cloud
 
