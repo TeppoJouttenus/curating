@@ -26,6 +26,16 @@
         {"module" : "development-workflow"},
         {"module" : "alpha"}
       ]
+    },
+    {
+      "name" : "acquia-path",
+      "title" : "Acquia Cloud for Developers",
+      "description" : "Get going with your Acquia deploymend and publish your content to the world",
+      "privacy" : "public",
+      "coverImage" : "https://pixabay.com/get/0b990a641facd8119958/1435696778/drops-of-water-578897_1280.jpg?direct",
+      "pages" : [
+        {"module" : "overview-of-acquia-cloud.md"}
+      ]
     }
   ],
 
@@ -36,7 +46,8 @@
     {"olm" : "./yext/orientation.md"},
     {"olm" : "./yext/development-workflow.md"},
     {"olm" : "./yext/alpha.md"},
-    {"olm" : "./test/test.md"}
+    {"olm" : "./test/test.md"},
+    {"olm" : "./acquia/overview-of-acquia-cloud.md"}
   ],
 
   "assets" : [
