@@ -84,23 +84,23 @@ Follow the exercises in this section for a step by step guide for installing too
 
 1. Sign up for Acquia Free Cloud at https://insight.acquia.com/free .
 
-![image alt text](image_0.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_0.png)
 
 2. Click Manage my code link when the site is provisioned
 
-![image alt text](image_1.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_1.png)
 
 3. From the drop down menu of Dev environment box, select Install Drupal and in the following screen, select Drupal 7 distribution.
 
-![image alt text](image_2.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_2.png)
 
-![image alt text](image_3.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_3.png)
 
-![image alt text](image_4.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_4.png)
 
 4. When the install task is done, click the orange box "Set up my site" link next to Dev to visit the site and run Drupal’s install process.
 
-![image alt text](image_5.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_5.png)
 
 At this point, the online development environment (Cloud Dev Site) is ready and this is now your online repository.
 
@@ -206,7 +206,7 @@ We strongly recommend using Acquia Dev Desktop 2 as explained in previous exerci
 
 ### Step A: Install WAMP or XAMPP
 
-(We will not cover detailed steps for installing WAMP / XAMPP or any other *AMP stack that users are using for their local development environment. We are assuming that, for some reasons, users are not using Acquia Dev Desktop for local development, but are using Acquia Cloud for hosting their site.)
+(We will not cover detailed steps for installing WAMP / XAMPP or any other \*AMP stack that users are using for their local development environment. We are assuming that, for some reasons, users are not using Acquia Dev Desktop for local development, but are using Acquia Cloud for hosting their site.)
 
 ### Step B: Install GIT
 
@@ -216,17 +216,17 @@ We strongly recommend using Acquia Dev Desktop 2 as explained in previous exerci
 
 3. Also, select the option Run Git from Windows Command prompt option
 
-![image alt text](image_6.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_6.png)
 
-![image alt text](image_7.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_7.png)
 
 ### Step C: Copy Git URL from Acquia Cloud
 
 1. Login to your Acquia Cloud Account
 
-2. Click Git URL link located at top right corner of the page![image alt text](image_8.png)
+2. Click Git URL link located at top right corner of the page![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_8.png)
 
-3. A pop-up window will display Git URL to be used for connecting with your Cloud Site![image alt text](image_9.png)
+3. A pop-up window will display Git URL to be used for connecting with your Cloud Site![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_9.png)
 
 4. Select All and Copy this URL to your clipboard
 
@@ -236,9 +236,9 @@ We strongly recommend using Acquia Dev Desktop 2 as explained in previous exerci
 
 2. Navigate to your $Home\Sites folder (typically C:\Users\[Your_User_Name\Sites]
 
-3. Right click inside the folder and click Git Bash Here from the contextual menu![image alt text](image_10.png)
+3. Right click inside the folder and click Git Bash Here from the contextual menu![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_10.png)
 
-4. In the Git Bash console, type the command git clone [Your_Git_URL_copied_from_Cloud]![image alt text](image_11.png)
+4. In the Git Bash console, type the command git clone [Your_Git_URL_copied_from_Cloud]![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_11.png)
 
 ### Step F - Install Drupal site locally
 
@@ -304,7 +304,7 @@ Your Cloud Dev and Local Dev code and databases are now in sync!
 
 ### At this point, our Cloud Dev site and Local Dev sites are ready and in sync!
 
-# ![image alt text](image_12.png)
+# ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_12.png)
 
 # Module 3: Platform best practices and suggested workflows
 
@@ -382,7 +382,7 @@ At this point, you’ve synced up your online Cloud Dev Site with your local env
 
 1. Download 'Hello Cloud' module here from Google Drive. ([https://docs.google.com/file/d/0B_jmG1TM9szHUEg0SnlhakZTYWs/](https://docs.google.com/file/d/0B_jmG1TM9szHUEg0SnlhakZTYWs/))
 
-2. Use the File > Download menu to get a zip file containing both files![image alt text](image_13.png)
+2. Use the File > Download menu to get a zip file containing both files![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_13.png)
 
 3. Add this module to your site:
 
@@ -404,7 +404,7 @@ Verify the module is working. This is a manual functional test.
 
 * In the main menu locate the new "Hello Cloud" link. Your site should look like this:
 
-![image alt text](image_14.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_14.png)
 
 ## Exercise 3.1.2 : Deploy on Cloud (Dev env) From Local
 
@@ -414,7 +414,7 @@ In the previous step, we cloned our Drupal site from Cloud to our local environm
 
 At this point, we’ll push changes from our Local Dev Site push to our Cloud Dev Site.
 
-![image alt text](image_15.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_15.png)
 
 NOTE: Copying the DB is a one-time event, mostly just for this workshop. Normally you would automate DB changes like enabling new modules.
 
@@ -434,7 +434,7 @@ NOTE: Copying the DB is a one-time event, mostly just for this workshop. Normall
 
 6. Enter a descriptive commit message. For example: "Adding Hello Cloud module."
 
-![image alt text](image_16.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_16.png)
 
 ### Option 2: On Linux with Git and Drush on the command line
 
@@ -472,7 +472,7 @@ $ drush sql-sync @mysite.local @mysite.dev
 
 2. You should now see that your Local Dev Site and Cloud Dev Site are in sync!
 
-![image alt text](image_17.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_17.png)
 
 ## Exercise 3.1.3 : Iterative development
 
@@ -492,7 +492,7 @@ We’re going to add user data to the live  production site. This is the typical
 
 2. On the Acquia Cloud UI, click the "visit" arrow next to Stage, and add a couple of users via Drupal’s People > Add User page.
 
-![image alt text](image_18.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_18.png)
 
 
 
@@ -510,7 +510,7 @@ Test your new code locally. You only have a single user (the admin), but that is
 
 Copy your latest Production database to your Dev environment for testing. Use the Cloud UI:
 
-![image alt text](image_19.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_19.png)
 
 Optionally , you can also copy this database to your local environment for more complete testing before pushing your code changes to Cloud Dev.
 
@@ -562,7 +562,7 @@ Now verify if your functionality is working correctly on the Cloud Dev Site
 
 For this purpose, login to your Cloud Dev Site and visit /hello-cloud link. You should see results like this
 
-![image alt text](image_20.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_20.png)
 
 *NOTE: If you do not see the changes, you may need to Clear Caches on the Cloud Dev Site. To do this, go to Admin > Configuration > Performance. Click Clear All Caches.*
 
@@ -632,7 +632,7 @@ Now we’ll build the site locally – adding a view and menu link in the view.
 
     * Keep the remaining defaults.
 
-    * ![image alt text](image_21.png)
+    * ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_21.png)
 
 3. Go to Structure > Views > Add New View.
 
@@ -640,7 +640,7 @@ Now we’ll build the site locally – adding a view and menu link in the view.
 
 5. Check your new page at /articles. Your site will look like this. Yes, with no content!
 
-![image alt text](image_22.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_22.png)
 
 ## Exercise 3.2.2 Deploy on Cloud
 
@@ -664,11 +664,11 @@ Now we’ll build the site locally – adding a view and menu link in the view.
 
 5. You may be asked to enter a Commit message in the following window. Enter appropriate commit message. For example: "Deploying initial site build.
 
-![image alt text](image_23.png)
+![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_23.png)
 
 ### Option 2: On Any system with Git and Drush
 
-1. **Code – via Git**
+1. Code – via Git
 
     * Open Command prompt. cd path/to/ your repository and enter following commands
 
@@ -692,7 +692,7 @@ Now we’ll build the site locally – adding a view and menu link in the view.
 
         * This begins the upload to the repository.
 
-2. **Database (Configurations and Content) – via drush sql-sync **
+2. Database (Configurations and Content) - via drush sql-sync
 
 This will push content types and configuration - and ALL content. For the first time, there doesn’t seem to be another way.
 
@@ -732,7 +732,7 @@ For this exercise, we will create a feature from our Articles Content Type and r
 
 5. Under "Advanced options", click “Generate Feature”.
 
-6. ![image alt text](image_24.png)
+6. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_24.png)
 
 7. Go back to Features overview page. Your feature should be listed here.
 
@@ -756,7 +756,7 @@ Choose the options which suits you best.
 
 3. Click "Push code to Cloud Dev".
 
-4. ![image alt text](image_25.png)
+4. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_25.png)
 
 ### Option 2- On any system with Git commandline
 
@@ -812,15 +812,15 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 
 3. Under No results behaviour > Click "Add".
 
-4. ![image alt text](image_26.png)
+4. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_26.png)
 
 5. Select Global: Text Area. Click Apply.
 
-6. ![image alt text](image_27.png)
+6. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_27.png)
 
 7. Add a message like "No articles available!"
 
-8. ![image alt text](image_28.png)
+8. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_28.png)
 
 9. Save the view.
 
@@ -830,13 +830,13 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 
 2. On the features overview page, locate your Articles feature. It will display status as 'Overridden'. (This is because you have changed / overridden the functionality from what's stored in the Feature)
 
-3. ![image alt text](image_29.png)
+3. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_29.png)
 
 4. Click on Re-create link next to the Articles feature.
 
 5. On the Re-create page, click to expand the Advanced Options, and click "Generate Feature"
 
-6. ![image alt text](image_30.png)
+6. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_30.png)
 
 7. This will update your feature's code with latest changes that you carried out using UI.
 
@@ -856,7 +856,7 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 
 3. Select the component which is overridden (Views) and Click "Revert Components"
 
-4. ![image alt text](image_31.png)
+4. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_31.png)
 
 5. Go back to Features overview page and verify if the Article feature is showing Default status
 
