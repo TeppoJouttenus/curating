@@ -82,7 +82,7 @@ Follow the exercises in this section for a step by step guide for installing too
 
 ## Exercise: Setup Acquia Cloud and Install Drupal
 
-<!-- @task, "hasDeliverable" : false, "text" : "Sign up for Acquia Free Cloud at https://insight.acquia.com/free"-->
+<!-- @link, "url" : "https://insight.acquia.com/free", "text": "Sign up for Acquia Free Cloud. " -->
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_0.png)
 
@@ -120,10 +120,10 @@ You will generate a public key on your machine, unless you want to use an existi
 
 2. Ensure that you don't already have a public key saved to your computer. To do this, run the following command:
 
-  ```
-  cd ~/.ssh
-  ls -l
-  ```
+    ```
+    cd ~/.ssh
+    ls -l
+    ```
 
 3. If the directory and key file exists, run the following commands to back up the key `id_rsa`, as this procedure overwrites your current key if it is named `id_rsa`.
 
