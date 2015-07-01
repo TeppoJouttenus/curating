@@ -3,18 +3,6 @@
 
   "paths" : [
     {
-      "name" : "OWASP-Top-10",
-      "title" : "OWASP Top 10",
-      "description" : "This course focuses on the most common security defects identified by the Open Web Application Security Project (OWASP)",
-      "privacy" : "private",
-      "pages" : [
-        {"page" : "./codiscope-owasp-top-10/pages/welcome.md"},
-        {"module" : "OWASP-Top-10-screenshots"},
-        {"module" : "OWASP-Top-10-flash"},
-        {"page" : "./codiscope-owasp-top-10/pages/live-long.md"}
-      ]
-    },
-    {
       "name" : "yext-path",
       "title" : "Yext Engineering Orientation",
       "description" : "Get up to speed quickly at Yext.",
