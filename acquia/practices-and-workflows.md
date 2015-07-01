@@ -335,7 +335,7 @@ drush dl ctools views features
 
 ### Step B. Add a View. Change your site configuration
 
-Now we’ll build the site locally – adding a view and menu link in the view.
+Now we’ll build the site locally, adding a view and menu link in the view.
 
 1. On your Local Dev Site, go to Modules page to enable these modules:
 
@@ -345,7 +345,6 @@ Now we’ll build the site locally – adding a view and menu link in the view.
     * View UI
 
 2. Tip: Verify that you have Articles Content Type. This is available if the Standard Profile is selected when you installed.
-
     * View name: "Articles".
     * Select Show "Content" of type “Article”
     * Select "Create a menu link"
