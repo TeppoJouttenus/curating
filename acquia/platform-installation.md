@@ -127,60 +127,60 @@ You will generate a public key on your machine, unless you want to use an existi
 
 3. If the directory and key file exists, run the following commands to back up the key `id_rsa`, as this procedure overwrites your current key if it is named `id_rsa`.
 
-  ```
-  mkdir key_backup
-  mv id_rsa* key_backup
-  ```
+    ```
+    mkdir key_backup
+    mv id_rsa* key_backup
+    ```
 
 4. Generate a new public/private key pair using the keygen command:
 
-  ```
-  ssh-keygen -b 4096
-  ```
+    ```
+    ssh-keygen -b 4096
+    ```
 
 5. The keygen command prompts you for the directory to contain the key.
 
-  ```
-  Generating public/private rsa key pair.
+    ```
+    Generating public/private rsa key pair.
 
-  Enter file in which to save the key (/Users/[user_dir]/.ssh/id_rsa):
-  ```
+    Enter file in which to save the key (/Users/[user_dir]/.ssh/id_rsa):
+    ```
 
 6. Press Enter to accept the default location of /.ssh/id_rsa in your user directory.
 
-  ```
-  Enter passphrase (empty for no passphrase): [passphrase]
+    ```
+    Enter passphrase (empty for no passphrase): [passphrase]
 
-  Enter same passphrase again: [passphrase]
-  ```
+    Enter same passphrase again: [passphrase]
+    ```
 
 7. Substitute [passphrase] with your own text. This is for encrypting the private key on your computer. It's possible to use a blank [passphrase], but if you do this, another user can impersonate you with a copy of the key file.
 
-  ```
-  Note: Be sure to keep track of the [passphrase] since you will need to enter it when using the key.
-  ```
+    ```
+    Note: Be sure to keep track of the [passphrase] since you will need to enter it when using the key.
+    ```
 
 8. The keygen command displays the following output:
 
-  ```
-  Generating public/private rsa key pair.
+    ```
+    Generating public/private rsa key pair.
 
-  Your identification has been saved in /Users/[user_dir]/.ssh/id_rsa.
+    Your identification has been saved in /Users/[user_dir]/.ssh/id_rsa.
 
-  Your public key has been saved in /Users/[user_dir]/.ssh/id_rsa.pub.
+    Your public key has been saved in /Users/[user_dir]/.ssh/id_rsa.pub.
 
-  The key fingerprint is:
+    The key fingerprint is:
 
-  52:96:e9:c8:06:c2:57:26:6d:ef:2f:0c:d9:81:f4:1c username@hostname
-  ```
+    52:96:e9:c8:06:c2:57:26:6d:ef:2f:0c:d9:81:f4:1c username@hostname
+    ```
 
 9. Copy the key to your clipboard. Run the following code to copy the key to your clipboard:
 
-  ```
-  pbcopy < ~/.ssh/id_rsa.pub
+    ```
+    pbcopy < ~/.ssh/id_rsa.pub
 
-  Copies the contents of the id_rsa.pub file to your clipboard
-  ```
+    Copies the contents of the id_rsa.pub file to your clipboard
+    ```
 
 10. Alternatively, using your favorite text editor, you can open the ~/.ssh/id_rsa.pub file and copy the contents of the file manually.
 
@@ -253,9 +253,9 @@ We strongly recommend using Acquia Dev Desktop 2 as explained in previous exerci
 
 1. Login to your Acquia Cloud Account
 
-2. Click Git URL link located at top right corner of the page![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_8.png)
+2. Click Git URL link located at top right corner of the page    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_8.png)
 
-3. A pop-up window will display Git URL to be used for connecting with your Cloud Site![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_9.png)
+3. A pop-up window will display Git URL to be used for connecting with your Cloud Site    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_9.png)
 
 4. Select All and Copy this URL to your clipboard
 
@@ -267,9 +267,9 @@ We strongly recommend using Acquia Dev Desktop 2 as explained in previous exerci
 
 2. Navigate to your $Home\Sites folder (typically `C:\Users\[Your_User_Name\Sites`]
 
-3. Right click inside the folder and click Git Bash Here from the contextual menu![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_10.png)
+3. Right click inside the folder and click Git Bash Here from the contextual menu    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_10.png)
 
-4. In the Git Bash console, type the command git clone [Your-Git-URL-copied-from-Cloud]![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_11.png)
+4. In the Git Bash console, type the command git clone [Your-Git-URL-copied-from-Cloud]    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_11.png)
 
 <!-- @task, "hasDeliverable" : false, "text" : "Clone the Cloud Codebase locally using Git."-->
 
@@ -324,6 +324,8 @@ At this stage, your Cloud Dev and Local Dev sites have exactly same codebase, bu
 Your Cloud Dev and Local Dev code and databases are now in sync!
 
 <!-- @task, "hasDeliverable" : false, "text" : "Synchronize database."-->
+
+<!-- @section -->
 
 ## Module 2 Summary
 

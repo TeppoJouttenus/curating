@@ -89,19 +89,19 @@ At this point, you’ve synced up your online Cloud Dev Site with your local env
 
 1. Download 'Hello Cloud' module here from Google Drive. ([https://docs.google.com/file/d/0B_jmG1TM9szHUEg0SnlhakZTYWs/](https://docs.google.com/file/d/0B_jmG1TM9szHUEg0SnlhakZTYWs/))
 
-2. Use the File > Download menu to get a zip file containing both files![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_13.png)
+2. Use the File > Download menu to get a zip file containing both files    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_13.png)
 
 3. Add this module to your site:
 
-  ```
-  $ cd ~/Dev\ Desktop/mysite
+    ```
+    $ cd ~/Dev\ Desktop/mysite
 
-  $ mkdir -p sites/all/modules/custom/hello_cloud
+    $ mkdir -p sites/all/modules/custom/hello_cloud
 
-  $ cd sites/all/modules/custom/hello_cloud
+    $ cd sites/all/modules/custom/hello_cloud
 
-  $ unzip ~/Downloads/hello_cloud-v1.zip
-  ```
+    $ unzip ~/Downloads/hello_cloud-v1.zip
+    ```
 
 4. Go to Admin > Modules. Select the Hello Cloud module to enable and Save Configuration.
 
@@ -215,7 +215,7 @@ We’re going to add user data to the live  production site. This is the typical
 
 Now we’ll go back to your Local Dev Site and local development environment.
 
-Open hello_cloud.module file, go to line number 23 and replace the function hello_cloud_page() with following code.  (If there is some issue with copying -pasting the following code, simply download the updated module files from the following URL, unzip and replace your existing files from hello_cloud folder) : [Files located here on Google Drive ](https://docs.google.com/file/d/0B_jmG1TM9szHbHJaVmtXb3lETW8/)
+Open `hello_cloud.module` file, go to line number 23 and replace the function `hello_cloud_page()` with following code.  (If there is some issue with copy-pasting the following code, simply download the updated module files from the following URL, unzip and replace your existing files from `hello_cloud` folder) : [Files located here on Google Drive ](https://docs.google.com/file/d/0B_jmG1TM9szHbHJaVmtXb3lETW8/)
 
 ```js
 /* code starts */function hello_cloud_page() {  $output = 'Say Hello to the Cloud!!';  $output .= hello_cloud_list_users();  return $output;}// Return an HTML table of users and email addresses for the site.function hello_cloud_list_users (){  $result = db_query("SELECT * FROM {users} where uid<>0")->fetchAll();  foreach ($result as $value) {    $account = $value->uid ? user_load($value->uid) : '';    $rows[] = array(      $value->uid ? theme('username', array('account' => $account)) : '',      $value->uid ? check_plain($account->mail) : '',    );    }  $header = array(   'Others Saying Hello!',   'Email address',  );  $output = theme('table', array('header' => $header, 'rows' => $rows));  return $output;}/* code ends */
@@ -283,7 +283,7 @@ For this purpose, login to your Cloud Dev Site and visit /hello-cloud link. You 
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_20.png)
 
-*NOTE: If you do not see the changes, you may need to Clear Caches on the Cloud Dev Site. To do this, go to Admin > Configuration > Performance. Click Clear All Caches.*
+> **NOTE:** If you do not see the changes, you may need to Clear Caches on the Cloud Dev Site. To do this, go to Admin > Configuration > Performance. Click Clear All Caches.
 
 ## Lesson 3.1 Summary
 
@@ -294,6 +294,8 @@ At the beginning of this section, we had a clone of our Cloud Dev site in our Lo
 We added some data on the Cloud Dev environment and tested our code.
 
 We made some changes to the code locally, pulled the data from Cloud Dev to test our changes.
+
+<!-- @section -->
 
 ## Lesson 3.2: Configuration Management Workflows with Acquia Cloud
 
@@ -337,18 +339,18 @@ Now we’ll build the site locally – adding a view and menu link in the view.
 
 1. On your Local Dev Site, go to Modules page to enable these modules:
 
-  * Chaos Tools
-  * Features
-  * Views
-  * View UI
+    * Chaos Tools
+    * Features
+    * Views
+    * View UI
 
 2. Tip: Verify that you have Articles Content Type. This is available if the Standard Profile is selected when you installed.
 
-  * View name: "Articles".
-  * Select Show "Content" of type “Article”
-  * Select "Create a menu link"
-  * Keep the remaining defaults.
-  * ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_21.png)
+    * View name: "Articles".
+    * Select Show "Content" of type “Article”
+    * Select "Create a menu link"
+    * Keep the remaining defaults.
+        ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_21.png)
 
 3. Go to Structure > Views > Add New View.
 
@@ -388,17 +390,17 @@ Now we’ll build the site locally – adding a view and menu link in the view.
 
 1. Code – via Git
 
-  * Open Command prompt. cd path/to/ your repository and enter following commands
-  * git status
-      * This checks to see what differences there are between local and repository
-  * git pull
-      * This pulls down the latest from the Cloud Dev Site
-  * git add .
-      * This records any new files you’ve added since the lastest sync
-  * git commit -am "Deploying initial site build"
-      * This makes a commit message to inform colleagues what changes were made.
-  * git push origin master
-      * This begins the upload to the repository.
+    * Open Command prompt. cd path/to/ your repository and enter following commands
+    * git status
+        * This checks to see what differences there are between local and repository
+    * git pull
+        * This pulls down the latest from the Cloud Dev Site
+    * git add .
+        * This records any new files you’ve added since the lastest sync
+    * git commit -am "Deploying initial site build"
+        * This makes a commit message to inform colleagues what changes were made.
+    * git push origin master
+        * This begins the upload to the repository.
 
 2. Database (Configurations and Content) - via drush sql-sync
 
@@ -444,7 +446,7 @@ For this exercise, we will create a feature from our Articles Content Type and r
 
 5. Under "Advanced options", click “Generate Feature”.
 
-6. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_24.png)
+    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_24.png)
 
 7. Go back to Features overview page. Your feature should be listed here.
 
@@ -467,7 +469,7 @@ Choose the options which suits you best.
 
 3. Click "Push code to Cloud Dev".
 
-4. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_25.png)
+    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_25.png)
 
 ### Option 2- On any system with Git commandline
 
@@ -518,15 +520,15 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 
 3. Under No results behaviour > Click "Add".
 
-4. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_26.png)
+    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_26.png)
 
 5. Select Global: Text Area. Click Apply.
 
-6. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_27.png)
+    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_27.png)
 
 7. Add a message like "No articles available!"
 
-8. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_28.png)
+    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_28.png)
 
 9. Save the view.
 
@@ -536,13 +538,13 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 
 2. On the features overview page, locate your Articles feature. It will display status as 'Overridden'. (This is because you have changed / overridden the functionality from what's stored in the Feature)
 
-3. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_29.png)
+    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_29.png)
 
 4. Click on Re-create link next to the Articles feature.
 
 5. On the Re-create page, click to expand the Advanced Options, and click "Generate Feature"
 
-6. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_30.png)
+    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_30.png)
 
 7. This will update your feature's code with latest changes that you carried out using UI.
 
@@ -562,7 +564,7 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 
 3. Select the component which is overridden (Views) and Click "Revert Components"
 
-4. ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_31.png)
+    ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_31.png)
 
 5. Go back to Features overview page and verify if the Article feature is showing Default status
 
