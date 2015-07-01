@@ -34,7 +34,7 @@
       "privacy" : "public",
       "coverImage" : "https://raw.githubusercontent.com/outlearn-content/assets/master/drops-of-water.jpg",
       "pages" : [
-        {"page" : "./yext/welcome.md"},
+        {"page" : "./acquia/welcome.md"},
         {"module" : "overview-of-acquia-cloud"},
         {"module" : "platform-installation"},
         {"module" : "practices-and-workflows"}
