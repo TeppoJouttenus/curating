@@ -30,7 +30,11 @@
 
 ### Topics
 
-* What is Acquia Cloud : [https://www.youtube.com/watch?v=3R5uSuqIei4](https://www.youtube.com/watch?v=3R5uSuqIei4)
+* What is Acquia Cloud
+
+<!-- @asset, "contentType": "outlearn/video", "provider": "youtube", "url": "https://www.youtube.com/embed/3R5uSuqIei4" -->
+
+<!-- @task, "hasDeliverable" : false, "text" : "Watch the What is Acquia Cloud video."-->
 
 * Tour of Acquia Cloud interface ([video script](https://docs.google.com/a/acquia.com/presentation/d/1b8dljtVIYF1rRgSt7et0vfrpA53ev5o5HbVj1MDPeMM/edit#slide=id.p))
 

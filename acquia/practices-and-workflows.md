@@ -25,6 +25,8 @@ By the end of this module, learners will be able to understand:
 
 * Best practices for Performance, Security and Live Deployment of a site on Acquia Cloud
 
+<!-- @section -->
+
 ## Lesson 3.1: Code Management Workflows with Acquia Cloud
 
 Now, you have your Cloud Dev and Local Dev environments setup and you're ready to start development.
@@ -75,6 +77,8 @@ Developers need to test newly added functionality on the Local Dev Site using da
 
 * Automating workflows using Acquia Cloud Hooks
 
+<!-- @section -->
+
 ## Exercise 3.1.1 : Local development
 
 ### Scenario
@@ -89,13 +93,15 @@ At this point, you’ve synced up your online Cloud Dev Site with your local env
 
 3. Add this module to your site:
 
-$ cd ~/Dev\ Desktop/mysite
+  ```
+  $ cd ~/Dev\ Desktop/mysite
 
-$ mkdir -p sites/all/modules/custom/hello_cloud
+  $ mkdir -p sites/all/modules/custom/hello_cloud
 
-$ cd sites/all/modules/custom/hello_cloud
+  $ cd sites/all/modules/custom/hello_cloud
 
-$ unzip ~/Downloads/hello_cloud-v1.zip
+  $ unzip ~/Downloads/hello_cloud-v1.zip
+  ```
 
 4. Go to Admin > Modules. Select the Hello Cloud module to enable and Save Configuration.
 
@@ -108,6 +114,8 @@ Verify the module is working. This is a manual functional test.
 * In the main menu locate the new "Hello Cloud" link. Your site should look like this:
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_14.png)
+
+<!-- @section -->
 
 ## Exercise 3.1.2 : Deploy on Cloud (Dev env) From Local
 
@@ -167,7 +175,9 @@ Open Command prompt. cd path/to/ your repository and enter following commands.
 
 Database (Configurations and Content) – via drush sql-sync. This will push content types and configuration - and ALL content. This step requires that you have Drush aliases set up correctly. Example:
 
+```
 $ drush sql-sync @mysite.local @mysite.dev
+```
 
 ### Step B: Check your site
 
@@ -176,6 +186,8 @@ $ drush sql-sync @mysite.local @mysite.dev
 2. You should now see that your Local Dev Site and Cloud Dev Site are in sync!
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_17.png)
+
+<!-- @section -->
 
 ## Exercise 3.1.3 : Iterative development
 
@@ -205,7 +217,9 @@ Now we’ll go back to your Local Dev Site and local development environment.
 
 Open hello_cloud.module file, go to line number 23 and replace the function hello_cloud_page() with following code.  (If there is some issue with copying -pasting the following code, simply download the updated module files from the following URL, unzip and replace your existing files from hello_cloud folder) : [Files located here on Google Drive ](https://docs.google.com/file/d/0B_jmG1TM9szHbHJaVmtXb3lETW8/)
 
+```js
 /* code starts */function hello_cloud_page() {  $output = 'Say Hello to the Cloud!!';  $output .= hello_cloud_list_users();  return $output;}// Return an HTML table of users and email addresses for the site.function hello_cloud_list_users (){  $result = db_query("SELECT * FROM {users} where uid<>0")->fetchAll();  foreach ($result as $value) {    $account = $value->uid ? user_load($value->uid) : '';    $rows[] = array(      $value->uid ? theme('username', array('account' => $account)) : '',      $value->uid ? check_plain($account->mail) : '',    );    }  $header = array(   'Others Saying Hello!',   'Email address',  );  $output = theme('table', array('header' => $header, 'rows' => $rows));  return $output;}/* code ends */
+```
 
 Test your new code locally. You only have a single user (the admin), but that is good enough for an initial test. If you want, in the next step you can copy your Production database all the way down to your local environment.
 
@@ -221,7 +235,9 @@ Optionally , you can also copy this database to your local environment for more 
 
 **Option 2**: Use the drush sql-sync command, if you have set up Drush aliases:
 
+```
 $ drush sql-sync @aqcloudcourse.dev @aqcloudcourse.local --no-cache --sanitize -v
+```
 
 Now verify if your functionality is working correctly with the data added from the cloud site. For this purpose, visit /hello-cloud link on the Local Dev Site, this should now reflect user data that we added on the Cloud Dev Site
 
@@ -297,6 +313,8 @@ Learn more about features  [https://drupal.org/node/580026](https://drupal.org/n
 
 Follow exercises in this section to create a view, export the view to a feature, push the feature from Local Dev to Cloud Dev, modify the feature and sync changes.
 
+<!-- @section -->
+
 ## Exercise 3.2.1 Local Development
 
 ### Scenario:
@@ -305,11 +323,13 @@ At this point you wish to add new code and configuration to your local site
 
 ### Step A. Add modules
 
-**Add contributed modules to sites/all/modules/contrib**
+Add contributed modules to sites/all/modules/contrib
 
 Add **CTools, Views, Features** modules on local environment. Either download and unzip or use the drush command -
 
+```
 drush dl ctools views features
+```
 
 ### Step B. Add a View. Change your site configuration
 
@@ -317,25 +337,18 @@ Now we’ll build the site locally – adding a view and menu link in the view.
 
 1. On your Local Dev Site, go to Modules page to enable these modules:
 
-    * Chaos Tools
-
-    * Features
-
-    * Views
-
-    * View UI
+  * Chaos Tools
+  * Features
+  * Views
+  * View UI
 
 2. Tip: Verify that you have Articles Content Type. This is available if the Standard Profile is selected when you installed.
 
-    * View name: "Articles".
-
-    * Select Show "Content" of type “Article”
-
-    * Select "Create a menu link"
-
-    * Keep the remaining defaults.
-
-    * ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_21.png)
+  * View name: "Articles".
+  * Select Show "Content" of type “Article”
+  * Select "Create a menu link"
+  * Keep the remaining defaults.
+  * ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_21.png)
 
 3. Go to Structure > Views > Add New View.
 
@@ -344,6 +357,8 @@ Now we’ll build the site locally – adding a view and menu link in the view.
 5. Check your new page at /articles. Your site will look like this. Yes, with no content!
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_22.png)
+
+<!-- @section -->
 
 ## Exercise 3.2.2 Deploy on Cloud
 
@@ -373,27 +388,17 @@ Now we’ll build the site locally – adding a view and menu link in the view.
 
 1. Code – via Git
 
-    * Open Command prompt. cd path/to/ your repository and enter following commands
-
-    * git status
-
-        * This checks to see what differences there are between local and repository
-
-    * git pull
-
-        * This pulls down the latest from the Cloud Dev Site
-
-    * git add .
-
-        * This records any new files you’ve added since the lastest sync
-
-    * git commit -am "Deploying initial site build"
-
-        * This makes a commit message to inform colleagues what changes were made.
-
-    * git push origin master
-
-        * This begins the upload to the repository.
+  * Open Command prompt. cd path/to/ your repository and enter following commands
+  * git status
+      * This checks to see what differences there are between local and repository
+  * git pull
+      * This pulls down the latest from the Cloud Dev Site
+  * git add .
+      * This records any new files you’ve added since the lastest sync
+  * git commit -am "Deploying initial site build"
+      * This makes a commit message to inform colleagues what changes were made.
+  * git push origin master
+      * This begins the upload to the repository.
 
 2. Database (Configurations and Content) - via drush sql-sync
 
@@ -401,7 +406,11 @@ This will push content types and configuration - and ALL content. For the first 
 
 Example
 
+```
 drush sql-sync @aqcloudcourse.loc @aqcloudcourse.prod --no-cache --sanitize -v
+```
+
+<!-- @section -->
 
 ## Exercise 3.2.3 Featurize
 
@@ -451,9 +460,8 @@ Choose the options which suits you best.
 
 1. Start Acquia Dev Desktop 2, select your site in the left column.
 
-    * Select "Push to Cloud Dev"
-
-    * Select "Code" ( only code, don't select Database )
+  * Select "Push to Cloud Dev"
+  * Select "Code" ( only code, don't select Database )
 
 2. In the Local workflow section on the right side:
 
@@ -466,24 +474,17 @@ Choose the options which suits you best.
 Open Command prompt. cd path/to/ your repository and enter following commands
 
 * git status
-
-    * This checks to see what differences there are between local and repository
+  * This checks to see what differences there are between local and repository
 
 * git pull
-
-    * This pulls down the latest from the Cloud Dev Site
+  * This pulls down the latest from the Cloud Dev Site
 
 * git add .
-
-    * This records any new files you’ve added since the lastest sync
-
+  * This records any new files you’ve added since the lastest sync
 * git commit -am "Deploying initial site build"
-
-    * This makes a commit message to inform colleagues what changes were made.
-
+  * This makes a commit message to inform colleagues what changes were made.
 * git push origin master
-
-    * This begins the upload to the repository.
+  * This begins the upload to the repository.
 
 ### Step C: Enable feature on the Cloud Dev Site
 
@@ -496,6 +497,8 @@ Open Command prompt. cd path/to/ your repository and enter following commands
 4. Select checkbox to Enable the feature.
 
 5. Click "Save Settings".
+
+<!-- @section -->
 
 ## Exercise 3.2.4 Iterative Development
 
@@ -565,6 +568,8 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 
 6. Go to the views page (/articles) and verify if newly added empty text is visible on the page.
 
+<!-- @section -->
+
 ## Lesson 3.3: Workflow automation using Acquia Cloud API
 
 ### Scenario
@@ -589,7 +594,9 @@ This can be achieved by using an Acquia Cloud Hook as follows
 
 Open Command prompt and type
 
+```
 cd path/to/repository
+```
 
 Create a file as follows using a text editor
 
@@ -597,6 +604,7 @@ hooks/dev/post-code-deploy/feature-update.sh
 
 Add the following to your file feature-update.sh
 
+```bash
 #!/bin/bash
 
 site=$1
@@ -604,6 +612,7 @@ site=$1
 env=$2
 
 drush @$site.$env features-revert-all
+```
 
 ### Step B: Push changes from local to cloud
 
@@ -631,6 +640,8 @@ There's a lot more that you can do with Cloud Hooks! Here are a few helpful reso
 
 * [Cloud Hooks Examples on Github ](https://github.com/acquia/cloud-hooks)
 
+<!-- @section -->
+
 ## Lesson 3.4: Performance, Security and Live Deployment
 
 Introduce learners to suggested best practices for improving site performance, securing site code and for the production deployment of a site on Acquia Cloud.
@@ -653,6 +664,8 @@ Introduce learners to suggested best practices for improving site performance, s
 
 * Monitor server health and trends using Platform Health.
 
+<!-- @section -->
+
 ## Lesson 3.4.1 Performance
 
 Audit your site for Performance best practices using Acquia Insight ([https://docs.acquia.com/network/enhance/insight](https://docs.acquia.com/network/enhance/insight))
@@ -667,9 +680,9 @@ Writing secure code (coding best practices for ensuring site security)
 
 Best practices for working with the file system, cron jobs, SSL, SSH and other platform components.
 
-    * [https://docs.acquia.com/cloud/files](https://docs.acquia.com/cloud/files)
+* [https://docs.acquia.com/cloud/files](https://docs.acquia.com/cloud/files)
 
-    * [https://docs.acquia.com/cloud/ssh](https://docs.acquia.com/cloud/ssh)
+* [https://docs.acquia.com/cloud/ssh](https://docs.acquia.com/cloud/ssh)
 
 ## Lesson 3.4.3 Live deployment
 
