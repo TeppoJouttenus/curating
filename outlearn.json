@@ -35,7 +35,8 @@
       "coverImage" : "https://raw.githubusercontent.com/outlearn-content/assets/master/drops-of-water.jpg",
       "pages" : [
         {"module" : "overview-of-acquia-cloud"},
-        {"module" : "platform-installation"}
+        {"module" : "platform-installation"},
+        {"module" : "practices-and-workflows"}
       ]
     }
   ],
@@ -49,7 +50,8 @@
     {"olm" : "./yext/alpha.md"},
     {"olm" : "./test/test.md"},
     {"olm" : "./acquia/overview-of-acquia-cloud.md"},
-    {"olm" : "./acquia/platform-installation.md"}
+    {"olm" : "./acquia/platform-installation.md"},
+    {"olm" : "./acquia/practices-and-workflows.md"}
   ],
 
   "assets" : [
