@@ -337,8 +337,7 @@ drush dl ctools views features
 
 Now we’ll build the site locally, adding a view and menu link in the view.
 
-1. On your Local Dev Site, go to Modules page to enable these modules:
-
+1.  On your Local Dev Site, go to Modules page to enable these modules:
     * Chaos Tools
     * Features
     * Views
@@ -387,8 +386,7 @@ Now we’ll build the site locally, adding a view and menu link in the view.
 
 ### Option 2: On Any system with Git and Drush
 
-1. Code – via Git
-
+1. Code: via Git
     * Open Command prompt. cd path/to/ your repository and enter following commands
     * git status
         * This checks to see what differences there are between local and repository
@@ -401,7 +399,7 @@ Now we’ll build the site locally, adding a view and menu link in the view.
     * git push origin master
         * This begins the upload to the repository.
 
-2. Database (Configurations and Content) - via drush sql-sync
+2. Database (Configurations and Content): via drush sql-sync
 
 This will push content types and configuration - and ALL content. For the first time, there doesn’t seem to be another way.
 
@@ -460,9 +458,8 @@ Choose the options which suits you best.
 ### Option 1 - On Mac or Windows with Acquia Dev Desktop 2
 
 1. Start Acquia Dev Desktop 2, select your site in the left column.
-
-  * Select "Push to Cloud Dev"
-  * Select "Code" ( only code, don't select Database )
+    * Select "Push to Cloud Dev"
+    * Select "Code" ( only code, don't select Database )
 
 2. In the Local workflow section on the right side:
 

@@ -13,6 +13,14 @@
 
 <!-- @section -->
 
+1.  On your Local Dev Site, go to Modules page to enable these modules:
+
+    Chaos Tools
+    Features
+    - Views
+
+    - View UI
+
 | Features / Recipe type | Factory | Service | Value | Constant | Provider |
 | -----                  | ----    | ----    | ----  | ----     | ----     |
 | can have dependencies  | yes     | yes     | no    | no       | yes      |
