@@ -25,7 +25,8 @@
         {"page" : "./acquia/welcome.md"},
         {"module" : "overview-of-acquia-cloud"},
         {"module" : "platform-installation"},
-        {"module" : "practices-and-workflows"}
+        {"module" : "practices-and-workflows"},
+        {"page" : "./acquia/next.md"},
       ]
     }
   ],
