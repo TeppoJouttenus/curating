@@ -117,7 +117,7 @@ Verify the module is working. This is a manual functional test.
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_14.png)
 
-<!-- @task, "hasDeliverable" : false, "text" : "Test your the Hello Cloud module."-->
+<!-- @task, "hasDeliverable" : false, "text" : "Test the Hello Cloud module."-->
 
 <!-- @section -->
 
@@ -217,7 +217,7 @@ We’re going to add user data to the live  production site. This is the typical
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_18.png)
 
-<!-- @task, "hasDeliverable" : false, "text" : "Add a couple of users to the site.."-->
+<!-- @task, "hasDeliverable" : false, "text" : "Add a couple of users to the site."-->
 
 ### Step B. Modify the module
 
@@ -251,7 +251,7 @@ $ drush sql-sync @aqcloudcourse.dev @aqcloudcourse.local --no-cache --sanitize -
 
 Now verify if your functionality is working correctly with the data added from the cloud site. For this purpose, visit /hello-cloud link on the Local Dev Site, this should now reflect user data that we added on the Cloud Dev Site
 
-<!-- @task, "hasDeliverable" : false, "text" : "Sync up database changes."-->
+<!-- @task, "hasDeliverable" : false, "text" : "Sync up your database changes."-->
 
 ### Step D. Push code from Local Dev Site to Cloud Dev Site
 
@@ -714,7 +714,7 @@ Building a super-performant site on Acquia Cloud  ([https://docs.acquia.com/clou
 
 Security and compliance with Acquia Cloud  ([https://docs.acquia.com/cloud/arch/security](https://docs.acquia.com/cloud/arch/security))
 
-<!-- @task, "hasDeliverable" : false, "text" : "Review the document Security and compliance with Acquia Cloud ."-->
+<!-- @task, "hasDeliverable" : false, "text" : "Review the document Security and compliance with Acquia Cloud."-->
 
 Writing secure code (coding best practices for ensuring site security)
 

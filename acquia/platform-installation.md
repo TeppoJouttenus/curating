@@ -82,7 +82,9 @@ Follow the exercises in this section for a step by step guide for installing too
 
 ## Exercise: Setup Acquia Cloud and Install Drupal
 
-<!-- @link, "url" : "https://insight.acquia.com/free", "text": "Sign up for Acquia Free Cloud. " -->
+First you should [sign up for Acquia Free Cloud](https://insight.acquia.com/free).
+
+<!-- @task, "hasDeliverable" : false, "text" : "Sign up for Acquia Free Cloud."-->
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_0.png)
 
@@ -204,7 +206,9 @@ For Windows, you need a program like Git Bash to generate a key.
 
 You will add the SSH key your Acquia Cloud site via the "Users and keys" page.
 
-<!-- @link, "url" : "https://docs.acquia.com/cloud/ssh/enable/add-key", "text": "Follow the instructions to add the SSH key to Acquia Cloud. " -->
+Follow the instructions to [add the SSH key to Acquia Cloud](https://docs.acquia.com/cloud/ssh/enable/add-key).
+
+<!-- @task, "hasDeliverable" : false, "text" : "Add the SSH key to Acquia Cloud."-->
 
 
 <!-- @section -->
