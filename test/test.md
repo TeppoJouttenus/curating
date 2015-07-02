@@ -13,6 +13,8 @@
 
 <!-- @section -->
 
+<!-- @link, "url" : "https://insight.acquia.com/free", "text": "Sign up for Acquia Free Cloud. " -->
+
 1.  On your Local Dev Site, go to Modules page to enable these modules:
 
     Chaos Tools
