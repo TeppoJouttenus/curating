@@ -105,6 +105,8 @@ At this point, you’ve synced up your online Cloud Dev Site with your local env
 
 4. Go to Admin > Modules. Select the Hello Cloud module to enable and Save Configuration.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Add a custom module to your site."-->
+
 ### Step B. Test it’s working locally
 
 Verify the module is working. This is a manual functional test.
@@ -114,6 +116,8 @@ Verify the module is working. This is a manual functional test.
 * In the main menu locate the new "Hello Cloud" link. Your site should look like this:
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_14.png)
+
+<!-- @task, "hasDeliverable" : false, "text" : "Test your the Hello Cloud module."-->
 
 <!-- @section -->
 
@@ -179,6 +183,8 @@ Database (Configurations and Content) – via drush sql-sync. This will push con
 $ drush sql-sync @mysite.local @mysite.dev
 ```
 
+<!-- @task, "hasDeliverable" : false, "text" : "Sync your code."-->
+
 ### Step B: Check your site
 
 1. Once the Push is successful, visit your Cloud Dev Site. You can click the "cloud site" URL in Dev Desktop.
@@ -186,6 +192,8 @@ $ drush sql-sync @mysite.local @mysite.dev
 2. You should now see that your Local Dev Site and Cloud Dev Site are in sync!
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_17.png)
+
+<!-- @task, "hasDeliverable" : false, "text" : "Verify that your Local Dev Site and Cloud Dev Site are in sync."-->
 
 <!-- @section -->
 
@@ -209,7 +217,7 @@ We’re going to add user data to the live  production site. This is the typical
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_18.png)
 
-
+<!-- @task, "hasDeliverable" : false, "text" : "Add a couple of users to the site.."-->
 
 ### Step B. Modify the module
 
@@ -222,6 +230,8 @@ Open `hello_cloud.module` file, go to line number 23 and replace the function `h
 ```
 
 Test your new code locally. You only have a single user (the admin), but that is good enough for an initial test. If you want, in the next step you can copy your Production database all the way down to your local environment.
+
+<!-- @task, "hasDeliverable" : false, "text" : "Add the suggested code into your module."-->
 
 ### Step C. Sync up the database changes
 
@@ -240,6 +250,8 @@ $ drush sql-sync @aqcloudcourse.dev @aqcloudcourse.local --no-cache --sanitize -
 ```
 
 Now verify if your functionality is working correctly with the data added from the cloud site. For this purpose, visit /hello-cloud link on the Local Dev Site, this should now reflect user data that we added on the Cloud Dev Site
+
+<!-- @task, "hasDeliverable" : false, "text" : "Sync up database changes."-->
 
 ### Step D. Push code from Local Dev Site to Cloud Dev Site
 
@@ -275,6 +287,8 @@ Open the Command prompt. cd path/to/ your repository and enter following command
 
 * git push origin master
 
+<!-- @task, "hasDeliverable" : false, "text" : "Push your code to the Cloud Dev site."-->
+
 ### Step E. Test it’s working
 
 Now verify if your functionality is working correctly on the Cloud Dev Site
@@ -284,6 +298,8 @@ For this purpose, login to your Cloud Dev Site and visit /hello-cloud link. You 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_20.png)
 
 > **NOTE:** If you do not see the changes, you may need to Clear Caches on the Cloud Dev Site. To do this, go to Admin > Configuration > Performance. Click Clear All Caches.
+
+<!-- @task, "hasDeliverable" : false, "text" : "Verify that you can see the users on your Cloud Dev Site."-->
 
 ## Lesson 3.1 Summary
 
@@ -332,6 +348,7 @@ Add **CTools, Views, Features** modules on local environment. Either download an
 ```
 drush dl ctools views features
 ```
+<!-- @task, "hasDeliverable" : false, "text" : "Add CTools, Views, Features modules on local environment."-->
 
 ### Step B. Add a View. Change your site configuration
 
@@ -357,6 +374,8 @@ Now we’ll build the site locally, adding a view and menu link in the view.
 5. Check your new page at /articles. Your site will look like this. Yes, with no content!
 
 ![image alt text](https://raw.githubusercontent.com/outlearn-content/assets/master/ac/image_22.png)
+
+<!-- @task, "hasDeliverable" : false, "text" : "Check your changes on your site."-->
 
 <!-- @section -->
 
@@ -409,6 +428,8 @@ Example
 drush sql-sync @aqcloudcourse.loc @aqcloudcourse.prod --no-cache --sanitize -v
 ```
 
+<!-- @task, "hasDeliverable" : false, "text" : "Sync your code."-->
+
 <!-- @section -->
 
 ## Exercise 3.2.3 Featurize
@@ -450,6 +471,8 @@ For this exercise, we will create a feature from our Articles Content Type and r
 8. Select the feature, this will enable it.
 
 9. Click "Save Settings".
+
+<!-- @task, "hasDeliverable" : false, "text" : "Create an Articles Feature."-->
 
 ### Step B: Push Changes - Feature created on Local Dev Site to the Cloud Dev Site
 
@@ -496,6 +519,8 @@ Open Command prompt. cd path/to/ your repository and enter following commands
 
 5. Click "Save Settings".
 
+<!-- @task, "hasDeliverable" : false, "text" : "Push your changes."-->
+
 <!-- @section -->
 
 ## Exercise 3.2.4 Iterative Development
@@ -528,6 +553,8 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 
 9. Save the view.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Create changes."-->
+
 ### Step B: Recreate feature
 
 1. Go to Structure > Features.
@@ -544,9 +571,13 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 
 7. This will update your feature's code with latest changes that you carried out using UI.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Recreate feature."-->
+
 ### Step C: Push code to cloud dev site
 
 1. Now follow steps to push your code to Cloud Dev Site. Try to complete this task without checking the steps in Exercise 3, Step C.
+
+<!-- @task, "hasDeliverable" : false, "text" : "Push code to cloud dev site."-->
 
 ### Step D: Update Feature on Cloud Dev Site
 
@@ -565,6 +596,8 @@ In a real life project, Drupal Site Building is an iterative activity. It is not
 5. Go back to Features overview page and verify if the Article feature is showing Default status
 
 6. Go to the views page (/articles) and verify if newly added empty text is visible on the page.
+
+<!-- @task, "hasDeliverable" : false, "text" : "Update Feature on Cloud Dev Site."-->
 
 <!-- @section -->
 
@@ -612,6 +645,8 @@ env=$2
 drush @$site.$env features-revert-all
 ```
 
+<!-- @task, "hasDeliverable" : false, "text" : "Create the Cloud Hook."-->
+
 ### Step B: Push changes from local to cloud
 
 Push your code to Cloud Dev Site.
@@ -620,11 +655,15 @@ Make changes to your feature on Local Dev Site.
 
 Push changes to Cloud Dev Site.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Push changes from local to cloud."-->
+
 ### Step C: Verify changes
 
 Visit the Articles View page (/articles) on your Cloud Dev Site .
 
 Verify that changes made locally and pushed via the feature update are reflected on the Cloud Dev Site . The Features Revert step on the Cloud Dev Site is now automated via Cloud Hook.
+
+<!-- @task, "hasDeliverable" : false, "text" : "Verify changes."-->
 
 ### More Resources
 
@@ -662,7 +701,6 @@ Introduce learners to suggested best practices for improving site performance, s
 
 * Monitor server health and trends using Platform Health.
 
-<!-- @section -->
 
 ## Lesson 3.4.1 Performance
 
@@ -670,9 +708,13 @@ Audit your site for Performance best practices using Acquia Insight ([https://do
 
 Building a super-performant site on Acquia Cloud  ([https://docs.acquia.com/cloud/performance](https://docs.acquia.com/cloud/performance) )
 
+<!-- @task, "hasDeliverable" : false, "text" : "Audit your site for Performance best practices."-->
+
 ## Lesson 3.4.2. Security
 
 Security and compliance with Acquia Cloud  ([https://docs.acquia.com/cloud/arch/security](https://docs.acquia.com/cloud/arch/security))
+
+<!-- @task, "hasDeliverable" : false, "text" : "Review the document Security and compliance with Acquia Cloud ."-->
 
 Writing secure code (coding best practices for ensuring site security)
 
@@ -685,6 +727,8 @@ Best practices for working with the file system, cron jobs, SSL, SSH and other p
 ## Lesson 3.4.3 Live deployment
 
 Carrying out load testing on Acquia cloud. ([https://docs.acquia.com/cloud/load](https://docs.acquia.com/cloud/load))
+
+<!-- @task, "hasDeliverable" : false, "text" : "Review the document Carrying out load testing on Acquia cloud."-->
 
 Deploying a site to Production on Acquia Cloud  ([https://docs.acquia.com/cloud/manage/publish](https://docs.acquia.com/cloud/manage/publish))
 
