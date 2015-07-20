@@ -5,7 +5,7 @@ import re
 import files
 import textwrap
 
-files = files.ng_files
+
 
 # Headers
 
@@ -23,6 +23,8 @@ reMarkdownLinkRem = re.compile(r'\[([^\]]+)\]\([^\)]*\)')
 # remove: [description](link) -> description
 reMarkdownLocalLinkRem = re.compile(r'\[(.+)\]\(#[^\)]*\)')
 # remove: [description](#local-link) -> description
+reMarkdownNonHttpLinkRem = re.compile(r'\[([^\]]+)\]\((?!http)[^\)]*\)')
+# remove: [description](link that does not start with 'http') -> description
 
 # Other links
 
@@ -83,12 +85,15 @@ reJSDocSpaceJsBlock = re.compile(r'\n```js')
 # convert: \n```js -> \n\n```js
 reJSDocSpaceHtmlBlock = re.compile(r'\n```html')
 # convert: \n```html -> \n\n```html
-reJSDocImgPath = re.compile(r'<img[^>]+src=\"([^\"]+)\"[^>]*>')
-# convert <img ... src="path"> -> <img src="github path">
+reJSDocImgPath = re.compile(r'\n<img(?! ng-src)[^>]+src=\"([^\"]+)\"[^>]*>')
+# convert \n<img ... src="path"> -> \n<img src="github path">
+reJSDocNavRemove = re.compile(r'\n<ul doc-tutorial-nav="[^"]+"></ul>')
+# remove: <ul doc-tutorial-nav="x"></ul>
+reJSDocResetRemove = re.compile(r'\n<div doc-tutorial-reset="[^"]+"></div>')
+# remove: <div doc-tutorial-reset="x></div>
 
-
-def convertJSDoc2olm(oldfile, newfile, header):
-    '''\
+def convertNGDoc2olm(oldfile, newfile, header):
+    '''
     Filter away unwanted syntax
     '''
 
@@ -109,9 +114,35 @@ def convertJSDoc2olm(oldfile, newfile, header):
         fileAsString = cleanUpExampleCode(fileAsString)
         fileAsString = reJSDocSpaceJsBlock.sub(r'\n\n```js', fileAsString)
         fileAsString = reJSDocSpaceHtmlBlock.sub(r'\n\n```html', fileAsString)
-        fileAsString = reJSDocImgPath.sub(r'<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/\1">', fileAsString)
+        fileAsString = reJSDocImgPath.sub(r'\n<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/\1">', fileAsString)
         outfile.write(fileAsString)
 
+def convertNGDocTutorial2olm(oldfile, newfile, header):
+    '''\
+    Filter away unwanted syntax
+    '''
+
+    with open(newfile, 'w') as outfile, open(oldfile, 'r') as infile:
+
+        outfile.write(header)
+        fileAsString = infile.read()
+        fileAsString = fileAsString.split('\n',4)[4]
+            # remove first 4 lines which have header info
+        fileAsString = reJSDocNavRemove.sub(r'', fileAsString)
+        fileAsString = reJSDocResetRemove.sub(r'', fileAsString)
+        fileAsString = reJSDocOneWordLinkRem.sub(r'\1', fileAsString)
+        fileAsString = reJSDocLinkRem.sub(r'\1', fileAsString)
+        fileAsString = reJSDocLocalLinkRem.sub(r'\1', fileAsString)
+        fileAsString = reOtherLinkRem.sub(r'\1', fileAsString)
+        fileAsString = reMarkdownNonHttpLinkRem.sub(r'\1', fileAsString)
+        fileAsString = convertAlerts(fileAsString)
+            # convertAlerts before cleanUpExampleCode so that
+            # alerts inside code don't get dedented and then removed
+        fileAsString = cleanUpExampleCode(fileAsString)
+        fileAsString = reJSDocSpaceJsBlock.sub(r'\n\n```js', fileAsString)
+        fileAsString = reJSDocSpaceHtmlBlock.sub(r'\n\n```html', fileAsString)
+        fileAsString = reJSDocImgPath.sub(r'\n<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/\1">', fileAsString)
+        outfile.write(fileAsString)
 
 def cleanUpExampleCode(input):
     '''\
@@ -235,6 +266,12 @@ def convertUnderstandingES6_2olm(oldfile, newfile, header):
 Start main code body
 ------------------------------
 """
+fileList = files.ng_files
+for i in range(len(fileList)):
+    convertNGDoc2olm(fileList[i]['infile'], fileList[i]['outfile'], fileList[i]['header'])
 
-for i in range(len(files)):
-    convertJSDoc2olm(files[i]['infile'], files[i]['outfile'], files[i]['header'])
+fileList = files.ng_tutorial_files
+for i in range(len(fileList)):
+    convertNGDocTutorial2olm(fileList[i]['infile'], fileList[i]['outfile'], fileList[i]['header'])
+
+# NEED TO CREATE SEPARATE FUNCTION TO CONVERT BASHO DOCS, THEY ARE LISTED IN FILES.PY

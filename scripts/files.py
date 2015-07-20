@@ -216,6 +216,22 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "description" : "There are a few things you might consider when running your AngularJS application in production.",
 """ + ng_generalHeader})
 
+
+ng_tutorial_files = []
+
+ng_tutorial_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/tutorial/index.ngdoc',
+'outfile' : '/Users/teppo/Content/angular/sections/index.md', 'header' : ''})
+
+indices = ['00','01','02','03','04','05','06','07','08','09','10','11','12']
+for index in indices:
+    ng_tutorial_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/tutorial/step_'+index+'.ngdoc',
+    'outfile' : '/Users/teppo/Content/angular/sections/step_'+index+'.md', 'header' : ''})
+
+ng_tutorial_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/tutorial/the_end.ngdoc',
+'outfile' : '/Users/teppo/Content/angular/sections/the_end.md','header' : ''})
+
+
+
 mdn_files = []
 mdn_files.append({'infile' : '/Users/teppo/Content/mdn/modules/re-introduction-raw.md',
 'outfile' : '/Users/teppo/Content/mdn/modules/re-introduction.md',
