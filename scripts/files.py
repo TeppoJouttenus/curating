@@ -6,6 +6,17 @@ ng_generalHeader = """"homepage" : "https://docs.angularjs.org/guide",
 -->
 """
 
+ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/index.ngdoc',
+'outfile' : '/Users/teppo/Content/angular/modules/index.md',
+'header' : """<!--
+{
+"name" : "index",
+"version" : "0.1",
+"title" : "Guide to AngularJS Documentation",
+"description" : "All you ever wanted to know about angular",
+"canonicalSource" : "https://docs.angularjs.org/guide",
+""" + ng_generalHeader})
+
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/introduction.ngdoc',
 'outfile' : '/Users/teppo/Content/angular/modules/introduction.md',
 'header' : """<!--
@@ -14,6 +25,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Introduction",
 "description" : "Explain the big picture of Angular.",
+"canonicalSource" : "https://docs.angularjs.org/guide/introduction",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/concepts.ngdoc',
@@ -24,6 +36,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Conceptual Overview",
 "description" : "Brief overview of all the important parts of AngularJS.",
+"canonicalSource" : "https://docs.angularjs.org/guide/concepts",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/databinding.ngdoc',
@@ -34,6 +47,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Data Binding",
 "description" : "How to synchronize data between model and view components.",
+"canonicalSource" : "https://docs.angularjs.org/guide/databinding",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/controller.ngdoc',
@@ -44,6 +58,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Controllers",
 "description" : "Controller is a JavaScript constructor function that is used to augment the Angular Scope.",
+"canonicalSource" : "https://docs.angularjs.org/guide/controller",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/services.ngdoc',
@@ -54,6 +69,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Services",
 "description" : "Angular services are substitutable objects that are wired together using dependency injection.",
+"canonicalSource" : "https://docs.angularjs.org/guide/services",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/scope.ngdoc',
@@ -64,6 +80,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Scopes",
 "description" : "Scope is an object that refers to the application model.",
+"canonicalSource" : "https://docs.angularjs.org/guide/scope",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/di.ngdoc',
@@ -74,6 +91,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Dependency Injection",
 "description" : "Software design pattern that deals with how components get hold of their dependencies.",
+"canonicalSource" : "https://docs.angularjs.org/guide/di",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/templates.ngdoc',
@@ -84,6 +102,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Templates",
 "description" : "Angular combines the template with information from the model and controller to render the dynamic view that a user sees in the browser.",
+"canonicalSource" : "https://docs.angularjs.org/guide/templates",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/expression.ngdoc',
@@ -94,6 +113,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Expressions",
 "description" : "Angular expressions are JavaScript-like code snippets that are usually placed in bindings.",
+"canonicalSource" : "https://docs.angularjs.org/guide/expression",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/filter.ngdoc',
@@ -104,6 +124,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Filters",
 "description" : "A filter formats the value of an expression for display to the user.",
+"canonicalSource" : "https://docs.angularjs.org/guide/filter",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/forms.ngdoc',
@@ -114,6 +135,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Forms",
 "description" : "A Form is a collection of controls for the purpose of grouping related controls together.",
+"canonicalSource" : "https://docs.angularjs.org/guide/forms",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/directive.ngdoc',
@@ -124,6 +146,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Directives",
 "description" : "When should you create your own directives in your AngularJS app, and how to implement them.",
+"canonicalSource" : "https://docs.angularjs.org/guide/directive",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/animations.ngdoc',
@@ -134,6 +157,18 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Animations",
 "description" : "Animation hooks trigger animations during the life cycle of various directives.",
+"canonicalSource" : "https://docs.angularjs.org/guide/animations",
+""" + ng_generalHeader})
+
+ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/module.ngdoc',
+'outfile' : '/Users/teppo/Content/angular/modules/module.md',
+'header' : """<!--
+{
+"name" : "module",
+"version" : "0.1",
+"title" : "Modules",
+"description" : "You can think of a module as a container for the different parts of your app - controllers, services, filters, directives, etc.",
+"canonicalSource" : "https://docs.angularjs.org/guide/module",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/compiler.ngdoc',
@@ -144,6 +179,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "HTML Compiler",
 "description" : "HTML compiler allows the developer to teach the browser new HTML syntax.",
+"canonicalSource" : "https://docs.angularjs.org/guide/compiler",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/providers.ngdoc',
@@ -154,6 +190,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Providers",
 "description" : "Provider recipe is the most comprehensive as well as most verbose of the recipe types.",
+"canonicalSource" : "https://docs.angularjs.org/guide/providers",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/bootstrap.ngdoc',
@@ -164,6 +201,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Bootstrap",
 "description" : "Explains the Angular initialization process.",
+"canonicalSource" : "https://docs.angularjs.org/guide/bootstrap",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/unit-testing.ngdoc',
@@ -174,6 +212,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Unit Testing",
 "description" : "These guidelines help you avoid creating an untestable application.",
+"canonicalSource" : "https://docs.angularjs.org/guide/unit-testing",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/e2e-testing.ngdoc',
@@ -184,6 +223,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "E2E Testing",
 "description" : "Help you verify the health of your Angular application.",
+"canonicalSource" : "https://docs.angularjs.org/guide/e2e-testing",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/$location.ngdoc',
@@ -194,6 +234,7 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Using $location",
 "description" : "The $location service parses the URL in the browser address bar and makes the URL available to your application.",
+"canonicalSource" : "https://docs.angularjs.org/guide/$location",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/css-styling.ngdoc',
@@ -204,6 +245,51 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Working With CSS",
 "description" : "List of CSS classes set by Angular.",
+"canonicalSource" : "https://docs.angularjs.org/guide/css-styling",
+""" + ng_generalHeader})
+
+ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/i18n.ngdoc',
+'outfile' : '/Users/teppo/Content/angular/modules/i18n.md',
+'header' : """<!--
+{
+"name" : "i18n",
+"version" : "0.1",
+"title" : "i18n and l10n",
+"description" : "Internationalization (i18n) is the process of developing products in such a way that they can be localized for languages and cultures easily. Localization (l10n), is the process of adapting applications and text to enable their usability in a particular cultural or linguistic market. .",
+"canonicalSource" : "https://docs.angularjs.org/guide/i18n",
+""" + ng_generalHeader})
+
+ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/security.ngdoc',
+'outfile' : '/Users/teppo/Content/angular/modules/security.md',
+'header' : """<!--
+{
+"name" : "security",
+"version" : "0.1",
+"title" : "Security",
+"description" : "This document explains some of AngularJS's security features and best practices that you should keep in mind as you build your application.",
+"canonicalSource" : "https://docs.angularjs.org/guide/security",
+""" + ng_generalHeader})
+
+ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/accessibility.ngdoc',
+'outfile' : '/Users/teppo/Content/angular/modules/accessibility.md',
+'header' : """<!--
+{
+"name" : "accessibility",
+"version" : "0.1",
+"title" : "Accessibility with ngAria",
+"description" : "The goal of ngAria is to improve Angular's default accessibility by enabling common ARIA attributes that convey state or semantic information for assistive technologies used by persons with disabilities.",
+"canonicalSource" : "https://docs.angularjs.org/guide/accessibility",
+""" + ng_generalHeader})
+
+ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/ie.ngdoc',
+'outfile' : '/Users/teppo/Content/angular/modules/ie.md',
+'header' : """<!--
+{
+"name" : "ie",
+"version" : "0.1",
+"title" : "Internet Explorer Compatibility",
+"description" : "This document describes the Internet Explorer (IE) idiosyncrasies when dealing with custom HTML attributes and tags.",
+"canonicalSource" : "https://docs.angularjs.org/guide/ie",
 """ + ng_generalHeader})
 
 ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/production.ngdoc',
@@ -214,8 +300,19 @@ ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/
 "version" : "0.1",
 "title" : "Running in Production",
 "description" : "There are a few things you might consider when running your AngularJS application in production.",
+"canonicalSource" : "https://docs.angularjs.org/guide/production",
 """ + ng_generalHeader})
 
+ng_files.append({'infile' : '/Users/teppo/Content/angular.js/docs/content/guide/migration.ngdoc',
+'outfile' : '/Users/teppo/Content/angular/modules/migration.md',
+'header' : """<!--
+{
+"name" : "migration",
+"version" : "0.1",
+"title" : "Migrating from Previous Versions",
+"description" : "Minor version releases in AngularJS introduce several breaking changes that may require changes to your application's source code; for instance from 1.0 to 1.2 and from 1.2 to 1.3.",
+"canonicalSource" : "https://docs.angularjs.org/guide/migration",
+""" + ng_generalHeader})
 
 ng_tutorial_files = []
 
