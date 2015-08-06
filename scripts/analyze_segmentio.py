@@ -20,7 +20,7 @@ zorba = zorba_api.Zorba_getInstance(store)
 
 # create zorba query
 eventString = json.dumps(events[0])
-for i in range(1,40):
+for i in range(1,50):
     eventString += ', '+json.dumps(events[i])
 
 query = '''let $events := [''' + eventString + \
