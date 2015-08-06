@@ -3,8 +3,9 @@
 # -*- coding: utf-8 -*-
 import os
 import json
-from pprint import pprint
+import cPickle as pickle
 
+# Process data
 eventFilePath = '/Volumes/Analytics/Segment.io-logs/Unpacked'
 eventFiles = os.listdir(eventFilePath)
 events = []
@@ -16,5 +17,4 @@ for f in eventFiles:
             eventLines[i] = eventLines[i].replace('null', '\"None\"')
             events.append(json.loads(eventLines[i]))
 
-for i in range(3):
-    pprint(events[i])
+pickle.dump(events, open("/Volumes/Analytics/Segment.io-logs/events_test.p", "wb"))
