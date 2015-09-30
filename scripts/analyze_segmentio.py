@@ -60,9 +60,6 @@ pprint(events[3])
 
 
 
-
-
-
 # run zorba query
 query = createEnteredSectionQuery(eventString, "Introduction")
 queryResult = json.loads(runZorba(query))
