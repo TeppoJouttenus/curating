@@ -13,7 +13,7 @@
 
 # What's a Learning Path Anyway?  
 
-There's a ton of good learning content out there in the web, much of it free. Why should a developer use Outlearn instead of just googling? Two key benefits are awesome curation and tracking your progress. Both benefits apply to individual Modules but they are really powerful for Learning Paths.
+There's a ton of good learning content out there in the web, much of it free. Why should a developer use Outlearn instead of just googling? Two key benefits are awesome curation and tracking your progress. Both benefits apply to individual Modules but they are especially powerful for Learning Paths.
 
 Most interesting learning is not about one piece of technology or an individual coding tip. The real value of human curation comes when an expert helps you see how several pieces of content fit together into a bigger narrative. Outlearn makes this super easy by giving you a collection of Modules that can be easily combined to Paths with some additional commentary. Here are some examples:
 

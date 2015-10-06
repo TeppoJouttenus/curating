@@ -71,10 +71,10 @@ In addition to the recurring curations activities, there are a few one-time task
 
 **Join the Slack group for curators**. We have a private group for Outlearn curators on Slack. It's the primary means of communication between Outlearn and the curators. You can also <a id="TeppoMail" href="mailto:teppo@outlearn.com" target="_blank">email Teppo</a> directly with any questions or comments.
 
-**Accept invite to Outlearn admin panel**. The admin panel is where you review links submitted by foragers and users. It is a separate account from your user profile. You should have received an invite but if you have not,
+**Accept invite to Outlearn admin panel**. The admin panel is where you review links submitted by foragers and users. It is a separate account from your user profile. You should have received an invite but if you have not, let us know on Slack.
 
 **Send in a short bio**. We will use the bio to highlight our expert curators in our newsletters, on our cite, etc. Please post it to Slack so other curators can get to know you as well.
 
-**Include Outlearn on your LinkedIn profile**. Please add to your LinkedIn profile a new position called Content Curator at Outlearn. The job description could be something like "Manage and develop learning paths for TOPIC and related content".
+**Include Outlearn on your LinkedIn profile**. Please add to your LinkedIn profile a new position called Content Curator at Outlearn. The job description could be something like “Manage and develop learning paths for TOPIC and related content”.
 
-**Complete this learning path**. This is obviously a bit meta... but we do think that it will be super helpful for you to complete this path, including checking of completion for all sections and tasks. That way you get a good feel for all that the platform offers.
+**Complete this learning path**. This is obviously a bit meta... but we do think that it will be super helpful for you to complete this path, including checking off the checkboxes for all sections and tasks. That way you get a good feel for all that the platform offers.
