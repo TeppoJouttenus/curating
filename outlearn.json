@@ -10,13 +10,15 @@
       "privacy" : "private",
       "pages" : [
         {"page" : "./pages/welcome.md"},
-        {"module" : "curate"}
+        {"module" : "curate"},
+        {"module" : "paths"}
       ]
     }
   ],
 
   "modules" : [
-    {"olm" : "./modules/curate.md"}
+    {"olm" : "./modules/curate.md"},
+    {"olm" : "./modules/paths.md"}
   ],
 
   "assets" : [
