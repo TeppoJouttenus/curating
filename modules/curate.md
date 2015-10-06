@@ -15,7 +15,7 @@
 
 Before we jump into the details, we want to explain what we’re aiming for with content curation.  That way you can be creative and proactive in driving towards that goal.
 
-In short, we are creating an awesome discovery experience. There are lots of websites with great learning materials for developers. But we haven’t found any site that aggregates all the best stuff in one place on an on-going basis. We think that the developer community would benefit a ton from such a resource and we’re building it at Outlearn. We’re starting with a handful of hot topics and will create a stellar learning experience for them. Developers can discover content in topic streams where each stream has a continuous flow of awesome, fresh content. As we build momentum, we will expand to further areas.
+In short, we are creating an **awesome discovery experience**. There are lots of websites with great learning materials for developers. But we haven’t found any site that aggregates all the best stuff in one place on an on-going basis. We think that the developer community would benefit a ton from such a resource and we’re building it at Outlearn. We’re starting with a handful of hot topics and will create a stellar learning experience for them. Developers can discover content in topic streams where each stream has a continuous flow of awesome, fresh content. As we build momentum, we will expand to further areas.
 
 <!-- @task, "hasDeliverable" : true, "text" : "What websites or services do you personally use to find awesome content? List as many as you want." -->
 
@@ -27,7 +27,7 @@ When a developer comes to Outlearn, we want them to get an immediate sense that 
 
 # Tasks
 
-Below are the different tasks for you to do as a curator. Each has estimates for the required time and volume of output. They are meant to give you something to start with but we know that you are responsible professionals and will use your time well.
+Below are the different tasks for you to do as a curator. Each has estimates for the required time and volume of output. They are meant to give you something to start with but we know that you are responsible professionals and will use your time well. So don't feel too constrained by our estimates.
 
 > Please let us know whenever you have ideas on how to best achieve an awesome discovery experience.
 
