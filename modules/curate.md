@@ -69,7 +69,7 @@ In addition to the recurring curations activities, there are a few one-time task
 
 <!-- @task, "text" : "Fill out a user profile." -->		
 
-**Join the Slack group for curators**. We have a private group for Outlearn curators on Slack. It's the primary means of communication between Outlearn and the curators. You can also <a id="TeppoMail" href="mailto:teppo@outlearn.com?subject=Curation%20question" target="_blank">email Teppo</a> directly with any questions or comments.
+**Join the Slack group for curators**. We have a private group for Outlearn curators on Slack. It's the primary means of communication between Outlearn and the curators. You can also <a id="TeppoMail" href="mailto:teppo@outlearn.com" target="_blank">email Teppo</a> directly with any questions or comments.
 
 **Accept invite to Outlearn admin panel**. The admin panel is where you review links submitted by foragers and users. It is a separate account from your user profile. You should have received an invite but if you have not,
 
