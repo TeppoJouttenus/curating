@@ -2,8 +2,8 @@
 {
 "name": "curate",
 "version" : "0.1",
-"title" : "Getting started with curation",
-"description" : "Quick intro to the basics of curation on Outlearn",
+"title" : "Getting Started with Curation",
+"description" : "Quick intro to the curation tasks.",
 "freshnessDate" : 2015-10-06,
 "license" : "All Rights Reserved"
 }
@@ -47,10 +47,34 @@ Our plan is to have 2-3 curators for each topic stream. The estimated effort bel
 2. **Submit links**. About 15 links / month, about 2 hr / month. We will not get all the great content from our users and the automated foragers. We rely on you to take a look at the big picture of the topic and add in any awesome content that has come out during a given week. Ideally, this can happen in the middle of any other activities that you are doing because you will come across awesome resources throughout the day. We will feature your profile image next to links that you submit.
 
 3. **Create learning paths**. One path / month, about 2 hr / month. Paths take a collection of link modules and combine them in ways that is more than the sum of the parts. Possible path ideas include:
-
     * Comparison of different libraries for a given task
     * Common mistakes to avoid when doing X
     * Pro tips when doing Y
     * All the talks in a conference
 
 4. **Tweet**. One tweet / week, less than 1 hr / month. When you find awesome resources, we would like you to tweet out links to them on Outlearn. This works especially well for paths that you and others have created but applies also to links that you would recommend to others.
+
+<!-- @section -->
+
+# Getting Set Up
+
+In addition to the recurring curations activities, there are a few one-time tasks to get you set up.
+
+**Create a user profile**. Much of your activity on Outlearn will be connected to your user profile. You can sign up [here](https://pilot.outlearn.com/auth/join). Then go [here](https://pilot.outlearn.com/profile) to add more info to your profile. Please include
+
+* Profile picture
+* Twitter account
+* GitHub account
+* LinkedIn account
+
+<!-- @task, "text" : "Fill out a user profile." -->		
+
+**Join the Slack group for curators**. We have a private group for Outlearn curators on Slack. It's the primary means of communication between Outlearn and the curators. You can also <a id="TeppoMail" href="mailto:teppo@outlearn.com?subject=Curation%20question" target="_blank">email Teppo</a> directly with any questions or comments.
+
+**Accept invite to Outlearn admin panel**. The admin panel is where you review links submitted by foragers and users. It is a separate account from your user profile. You should have received an invite but if you have not,
+
+**Send in a short bio**. We will use the bio to highlight our expert curators in our newsletters, on our cite, etc. Please post it to Slack so other curators can get to know you as well.
+
+**Include Outlearn on your LinkedIn profile**. Please add to your LinkedIn profile a new position called Content Curator at Outlearn. The job description could be something like "Manage and develop learning paths for TOPIC and related content".
+
+**Complete this learning path**. This is obviously a bit meta... but we do think that it will be super helpful for you to complete this path, including checking of completion for all sections and tasks. That way you get a good feel for all that the platform offers.
