@@ -28,4 +28,4 @@ Outlearn has two different ways to create a Path with a narrative. The easiest w
 
 # How Do I Create a Path?
 
-Coming soon. In the meantime, please go ahead and get started planning your first path or two. The tools for you to create paths are almost ready.
+Coming soon. In the meantime, please go ahead and get started planning your first path or two. 
