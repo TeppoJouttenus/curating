@@ -5,7 +5,6 @@
 "title" : "Finding and Reviewing Links",
 "description" : "Outlearn's master plan for finding all the awesomeness out there.",
 "freshnessDate" : 2015-10-06,
-"privacy" : "private",
 "license" : "All Rights Reserved"
 }
 -->

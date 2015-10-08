@@ -5,7 +5,6 @@
 "title" : "Creating Learning Paths",
 "description" : "Learn what makes an effective learning path and how to create it on the Outlearn platform.",
 "freshnessDate" : 2015-10-06,
-"privacy" : "private",
 "license" : "All Rights Reserved"
 }
 -->

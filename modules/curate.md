@@ -5,7 +5,6 @@
 "title" : "Getting Started with Curation",
 "description" : "Quick intro to the curation tasks.",
 "freshnessDate" : 2015-10-06,
-"privacy" : "private",
 "license" : "All Rights Reserved"
 }
 -->
