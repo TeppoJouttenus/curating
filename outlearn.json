@@ -11,6 +11,7 @@
       "pages" : [
         {"page" : "./pages/welcome.md"},
         {"module" : "curate"},
+        {"module" : "modules"},
         {"module" : "paths"}
       ]
     }
@@ -19,7 +20,7 @@
   "modules" : [
     {"olm" : "./modules/curate.md"},
     {"olm" : "./modules/paths.md"},
-    {"olm" : "./modules/modules.md"}    
+    {"olm" : "./modules/modules.md"}
   ],
 
   "assets" : [
