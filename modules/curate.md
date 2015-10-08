@@ -35,24 +35,15 @@ Our plan is to have 2-3 curators for each topic stream. The estimated effort bel
 
 1. **Review links**. About 40-80 links / month, about 2 hr / month. Links will be submitted both by individual users and by “foragers” that are created by Outlearn and automatically pull candidate links from sources such as Reddit, Hacker News, newsletters, blogs, etc. This is the first task because we want to review the links submitted by users as quickly as possible. If each curator reviews links a few times a week, the turnaround time will be short.
 
-    When reviewing links, the main consideration is the quality of the resource. We are considering featuring your profile image next to links that you approve so consider if the quality is such that you would want to recommend it to a friend. We expect that you will quickly get to a point where you can open a link and in most cases very quickly decide if it’s in or out. Then there will be some borderline cases. We have a Slack channel for all the curators where we can jointly create best practices for deciding what should be included or not.
-
-    For us, quality means a few things
-    * Accurate and up-to-date content
-    * Effective presentation
-    * Relevant topic for developers
-
-    In addition to quality of the content, please also check that our platform turned the link into an Outlearn module correctly so that the title, description, and screenshot are reasonable.
-
 2. **Submit links**. About 15 links / month, about 2 hr / month. We will not get all the great content from our users and the automated foragers. We rely on you to take a look at the big picture of the topic and add in any awesome content that has come out during a given week. Ideally, this can happen in the middle of any other activities that you are doing because you will come across awesome resources throughout the day. We will feature your profile image next to links that you submit.
 
-3. **Create learning paths**. One path / month, about 2 hr / month. Paths take a collection of link modules and combine them in ways that is more than the sum of the parts. Possible path ideas include:
+3. **Create Learning Paths**. One Path / month, about 2 hr / month. Paths take a collection of Link Modules and combine them in ways that is more than the sum of the parts. Possible Path ideas include:
     * Comparison of different libraries for a given task
     * Common mistakes to avoid when doing X
     * Pro tips when doing Y
     * All the talks in a conference
 
-4. **Tweet**. One tweet / week, less than 1 hr / month. When you find awesome resources, we would like you to tweet out links to them on Outlearn. This works especially well for paths that you and others have created but applies also to links that you would recommend to others.
+4. **Tweet**. One tweet / week, less than 1 hr / month. When you find awesome resources, we would like you to tweet out links to them on Outlearn. This works especially well for Paths that you and others have created but applies also to links that you would recommend to others.
 
 <!-- @section -->
 
@@ -71,10 +62,32 @@ In addition to the recurring curations activities, there are a few one-time task
 
 **Join the Slack group for curators**. We have a private group for Outlearn curators on Slack. It's the primary means of communication between Outlearn and the curators. You can also <a id="TeppoMail" href="mailto:teppo@outlearn.com" target="_blank">email Teppo</a> directly with any questions or comments.
 
+<!-- @task, "text" : "Join the Slack group." -->		
+
 **Accept invite to Outlearn admin panel**. The admin panel is where you review links submitted by foragers and users. It is a separate account from your user profile. You should have received an invite but if you have not, let us know on Slack.
+
+<!-- @task, "text" : "Check that you can log in and change your password." -->		
 
 **Send in a short bio**. We will use the bio to highlight our expert curators in our newsletters, on our cite, etc. Please post it to Slack so other curators can get to know you as well.
 
+<!-- @task, "text" : "Post a short bio on Slack." -->		
+
 **Include Outlearn on your LinkedIn profile**. Please add to your LinkedIn profile a new position called Content Curator at Outlearn. The job description could be something like “Manage and develop learning paths for TOPIC and related content”.
 
-**Complete this learning path**. This is obviously a bit meta... but we do think that it will be super helpful for you to complete this path, including checking off the checkboxes for all sections and tasks. That way you get a good feel for all that the platform offers.
+<!-- @task, "text" : "Add Outlearn to your LinkedIn profile." -->		
+
+**Complete this Learning Path**. This is obviously a bit meta... but we do think that it will be super helpful for you to complete this Path, including checking off the checkboxes for all sections and tasks. That way you get a good feel for all that the platform offers.
+
+<!-- @section -->
+
+# Communication
+
+The best way for you to talk about anything related to curation is in the [Outlearn Curators Slack group](https://outlearn.slack.com/messages/curators/). This group is shared by all the Outlearn curators and is ideal for us to figure out best practices for curation and sharing what we're learning. If you have a question or a comment, Slack is a good default. Typical discussion topics will include:
+
+* Good ways to identify awesome links to submit
+* Criteria for reviewing links, including tagging and featuring
+* Feedback on the admin interface or the site in general
+
+Getting to talk in real time is also powerful so we plan on talking with individual curators every once in a while to get your thoughts and feedback in a more high-bandwidth setting.
+
+Finally, you can <a id="TeppoMail" href="mailto:teppo@outlearn.com" target="_blank">email Teppo</a>.

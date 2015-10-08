@@ -18,7 +18,8 @@
 
   "modules" : [
     {"olm" : "./modules/curate.md"},
-    {"olm" : "./modules/paths.md"}
+    {"olm" : "./modules/paths.md"},
+    {"olm" : "./modules/modules.md"}    
   ],
 
   "assets" : [
