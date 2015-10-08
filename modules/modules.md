@@ -5,6 +5,7 @@
 "title" : "Finding and Reviewing Links",
 "description" : "Outlearn's master plan for finding all the awesomeness out there.",
 "freshnessDate" : 2015-10-06,
+"privacy" : "private",
 "license" : "All Rights Reserved"
 }
 -->
@@ -12,6 +13,8 @@
 <!-- @section -->
 
 # What Makes a Good Module
+
+Best learning is customized based on the needs of individuals and teams. Current learning solutions make that much harder than it should be. Outlearn unleashes customization through Modules that any developer or manager can assemble to customized Learning Paths. Each Module
 
 Outlearn supports both native Modules and "Link Modules" which are created from links submitted to the platform. We expect that early on there will be much more Link Modules than native Modules. Longer term, we want to make Outlearn such an attractive publishing platform that lots of developer authors want to publish native here. Right now, a key part of your work as a curator is to find and review links to great learning resources on the web.
 
@@ -33,7 +36,7 @@ Potential targets for Outlearn Link Modules include:
 * **Software libraries or packages**. Staying up-to-date on the latest libraries, gems, packages, etc. can be hard work and we can help by including high-quality ones in the catalog. If a github repo has a decent readme file, you can link directly to that. You can also link to a post talking about a resource.
 * **Tools**. Developers are passionate about their tools so links to Atom or Sublime Text packages, build tools, testing frameworks, etc. are great additions to the Outlearn catalog.
 * **Anything else valuable**. The list above certainly misses some solid resources that should be included so feel free to add other valuable stuff.
-We are currently staying focused on technical resources so we will not include discussions about how it is to work for a startup or cool movies that developers love. But within the broad category of technical learning material, go ahead and be create. We can also discuss what should go in via Slack.
+We are currently staying focused on technical resources so we will not include discussions about how it is to work for a startup or cool movies that developers love. But within the broad category of technical learning material, go ahead and be create. We can also discuss what should go in via [Slack](https://outlearn.slack.com/messages/curators/).
 
 <!-- @section -->
 

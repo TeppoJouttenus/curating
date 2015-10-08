@@ -5,6 +5,7 @@
 "title" : "Getting Started with Curation",
 "description" : "Quick intro to the curation tasks.",
 "freshnessDate" : 2015-10-06,
+"privacy" : "private",
 "license" : "All Rights Reserved"
 }
 -->
@@ -15,7 +16,13 @@
 
 Before we jump into the details, we want to explain what we’re aiming for with content curation.  That way you can be creative and proactive in driving towards that goal.
 
-In short, we are creating an **awesome discovery experience**. There are lots of websites with great learning materials for developers. But we haven’t found any site that aggregates all the best stuff in one place on an on-going basis. We think that the developer community would benefit a ton from such a resource and we’re building it at Outlearn. We’re starting with a handful of hot topics and will create a stellar learning experience for them. Developers can discover content in topic streams where each stream has a continuous flow of awesome, fresh content. As we build momentum, we will expand to further areas.
+Outlearn is focused on serving professional software developers. We are explicitly NOT focused on people who are learning to code for the first time. We're all about the pros, and our content should reflect that.
+
+There are lots of websites and newsletters covering great learning resources for pro developers. But, in our experience, none of them really gather all the best stuff in one place on an on-going basis. That's what we're building with our Outlearn topic stream.
+
+We want every Outlearn topic stream to be the best place to get up to speed and stay up to speed on the topic in question. If there is a learning resource on the web that pro devs interested in topic X really must know about, it HAS to be there in the Outlearn topic stream for X.
+
+Your job as a curator is to deliver on this vision by delivering a superior content discovery experience for pro developers. It's about breadth, depth, relevance, and freshness. If your topic area is indisputably superior to all other web destinations on all these dimensions, you're dong a great job.
 
 <!-- @task, "hasDeliverable" : true, "text" : "What websites or services do you personally use to find awesome content? List as many as you want." -->
 
@@ -43,7 +50,7 @@ Our plan is to have 2-3 curators for each topic stream. The estimated effort bel
     * Pro tips when doing Y
     * All the talks in a conference
 
-4. **Tweet**. One tweet / week, less than 1 hr / month. When you find awesome resources, we would like you to tweet out links to them on Outlearn. This works especially well for Paths that you and others have created but applies also to links that you would recommend to others.
+4. **Tweet**. At least one tweet / week, less than 1 hr / month. When you find awesome resources, we would like you to tweet out links to them on Outlearn. This works especially well for Paths that you and others have created but applies also to links that you would recommend to others.
 
 <!-- @section -->
 
@@ -60,7 +67,7 @@ In addition to the recurring curations activities, there are a few one-time task
 
 <!-- @task, "text" : "Fill out a user profile." -->		
 
-**Join the Slack group for curators**. We have a private group for Outlearn curators on Slack. It's the primary means of communication between Outlearn and the curators. You can also <a id="TeppoMail" href="mailto:teppo@outlearn.com" target="_blank">email Teppo</a> directly with any questions or comments.
+**Join the Slack group for curators**. We have a private group for Outlearn curators on [Slack](https://outlearn.slack.com/messages/curators/). It's the primary means of communication between Outlearn and the curators. You can also <a id="TeppoMail" href="mailto:teppo@outlearn.com" target="_blank">email Teppo</a> directly with any questions or comments.
 
 <!-- @task, "text" : "Join the Slack group." -->		
 
