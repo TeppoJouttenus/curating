@@ -80,6 +80,8 @@ In addition to the recurring curations activities, there are a few one-time task
 
 **Include Outlearn on your LinkedIn profile**. Please add to your LinkedIn profile a new position called Content Curator at Outlearn. The job description could be something like “Manage and develop learning paths for TOPIC and related content”.
 
+![Outlearn Curator on LinkedIn](https://raw.githubusercontent.com/outlearn-content/assets/master/curator-linkedin.png)
+
 <!-- @task, "text" : "Add Outlearn to your LinkedIn profile." -->		
 
 **Complete this Learning Path**. This is obviously a bit meta... but we do think that it will be super helpful for you to complete this Path, including checking off the checkboxes for all sections and tasks. That way you get a good feel for all that the platform offers.
