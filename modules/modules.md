@@ -43,7 +43,7 @@ We are currently staying focused on technical resources so we will not include d
 
 # Submit Links
 
-The workflow for submitting links is the same for users and curators. You have to be logged in on outlearn.com to submit a link. Go to our [Contribute a Link](https://pilot.outlearn.com/links/contribute) page, paste in a link and optionally add suggested tags. We are considering additional ways to make this easy such as a bookmarklet, Chrome plugin, etc. If you have opinions on how to make link submissions as easy as possible, please share them in Slack.
+The workflow for submitting links is the same for users and curators. You have to be logged in on outlearn.com to submit a link. Go to our [Contribute a Link](https://pilot.outlearn.com/links/contribute) page, paste in a link and optionally add suggested tags. We will soon have a bookmarklet to submit links easily and are considering additional ways to submit such as a Chrome plugin, etc. If you have opinions on how to make link submissions as easy as possible, please share them in Slack.
 
 We aim to automate as much of the link submission as possible with foragers that go through pre-selected web resources and submit links automatically for review. What we ask you to do is to find things that the foragers are missing and give us feedback so that we improve the sources and filters used in the foragers. You can take a look at the individual topic stream on outlearn.com to see what's missing. We also have a quick filter in the admin tools to search for URL's so you can see what has already been submitted. Instructions and admin access to search through submitted links are coming soon.
 
@@ -53,7 +53,10 @@ We aim to automate as much of the link submission as possible with foragers that
 
 When reviewing links, the main consideration is the quality of the original resource as described in the section What Makes a Good Module. In addition, please also check that our platform turned the link into an Outlearn module correctly so that the title, description, and screenshot are reasonable. Out end goal is to have new content appear in the catalog as quickly after publication as possible so if you can review links a few times a week, that will be ideal.
 
-Instructions and admin access to review submitted links are coming soon.
+You should have received login information from Outlearn for the admin panel that lets you review submitted links. Go ahead and log in and you will see the screen below:
+
+![Outlearn Curator on LinkedIn](https://raw.githubusercontent.com/outlearn-content/assets/master/cc/navigate.png)
+
 
 
 
