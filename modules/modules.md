@@ -115,6 +115,6 @@ design-patterns
 
 # Submit Links
 
-The workflow for submitting links is the same for users and curators. You have to be logged in on outlearn.com to submit a link. Go to our [Contribute a Link](https://pilot.outlearn.com/links/contribute) page, paste in a link and optionally add suggested tags. We have a bookmarklet to submit links easily and are considering additional ways to submit such as a Chrome plugin, etc. If you have opinions on how to make link submissions as easy as possible, please share them in Slack.
+The workflow for submitting links is the same for users and curators. You have to be logged in on outlearn.com to submit a link. Go to our [Contribute a Link](https://www.outlearn.com/links/contribute) page, paste in a link and optionally add suggested tags. We have a bookmarklet to submit links easily and are considering additional ways to submit such as a Chrome plugin, etc. If you have opinions on how to make link submissions as easy as possible, please share them in Slack.
 
 We aim to automate as much of the link submission as possible with foragers that go through pre-selected web resources and submit links automatically for review. What we ask you to do is to find things that the foragers are missing and give us feedback so that we improve the sources and filters used in the foragers. You can take a look at the individual Topic Stream on outlearn.com to see what's missing. You can also use the admin panel to view all links and search by URL for links or websites that are already represented on the platform.

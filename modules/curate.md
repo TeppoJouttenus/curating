@@ -57,7 +57,7 @@ Our plan is to have 2-3 curators for each topic stream. The estimated effort bel
 
 In addition to the recurring curations activities, there are a few one-time tasks to get you set up.
 
-**Create a user profile**. Much of your activity on Outlearn will be connected to your user profile. You can sign up [here](https://pilot.outlearn.com/auth/join). Then go [here](https://pilot.outlearn.com/profile) to add more info to your profile. Please include
+**Create a user profile**. Much of your activity on Outlearn will be connected to your user profile. You can sign up [here](https://www.outlearn.com/auth/join). Then go [here](https://www.outlearn.com/profile) to add more info to your profile. Please include
 
 * Profile picture
 * Twitter account
