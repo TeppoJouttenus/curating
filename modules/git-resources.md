@@ -12,6 +12,12 @@
 
 <!-- @section -->
 
+# Overview
+
+If you have learned the basics of git and want to get deeper, this is the right place for you. This collection of resources gives you lots of different ways to pursue your git journey further. You probably will choose only some of them and there is a fair bit of overlap between the comprehensive resources. So just choose what meets your needs the best. 
+
+<!-- @section -->
+
 # Interactive Tutorials
 
 * [Git Immersion](http://gitimmersion.com)
@@ -43,6 +49,8 @@
 # Coming from Other Systems
 
 * [Git - SVN Crash Course](http://git.or.cz/course/svn.html)
+
+<!-- @section -->
 
 # Theory
 
