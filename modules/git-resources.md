@@ -16,7 +16,7 @@
 
 * [Git Immersion](http://gitimmersion.com)
 * [Git Tutorial 1](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
-* [Git Tutorial 2]((https://www.kernel.org/pub/software/scm/git/docs/gittutorial-2.html)
+* [Git Tutorial 2](https://www.kernel.org/pub/software/scm/git/docs/gittutorial-2.html)
 
 
 <!-- @section -->
