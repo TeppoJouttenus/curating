@@ -13,15 +13,15 @@
 
 # Big Picture Goal
 
-Before we jump into the details, we want to explain what we’re aiming for with content curation.  That way you can be creative and proactive in driving towards that goal.
+Before we jump into the details, we want to explain what we’re aiming for with content curation. That way you can be creative in driving towards that goal.
 
 Outlearn is focused on serving professional software developers. We are explicitly NOT focused on people who are learning to code for the first time. We're all about the pros, and our content should reflect that.
 
-There are lots of websites and newsletters covering great learning resources for pro developers. But, in our experience, none of them really gather all the best stuff in one place on an on-going basis. That's what we're building with our Outlearn topic stream.
+There are lots of websites and newsletters covering great learning resources for pro developers. But, in our experience, none of them really gather all the best stuff in one place on an on-going basis. That's what we're building with our Outlearn topic streams.
 
 We want every Outlearn topic stream to be the best place to get up to speed and stay up to speed on the topic in question. If there is a learning resource on the web that pro devs interested in topic X really must know about, it HAS to be there in the Outlearn topic stream for X.
 
-Your job as a curator is to deliver on this vision by delivering a superior content discovery experience for pro developers. It's about breadth, depth, relevance, and freshness. If your topic area is indisputably superior to all other web destinations on all these dimensions, you're dong a great job.
+Your job as a curator is to deliver on this vision by creating a superior content discovery experience for pro developers. It's about breadth, depth, relevance, and freshness. If your topic area is indisputably superior to all other web destinations on all these dimensions, you're doing a great job.
 
 <!-- @task, "hasDeliverable" : true, "text" : "What websites or services do you personally use to find awesome content? List as many as you want." -->
 
@@ -39,17 +39,17 @@ Below are the different tasks for you to do as a curator. Each has estimates for
 
 Our plan is to have 2-3 curators for each topic stream. The estimated effort below is for one curator.
 
-1. **Review links**. About 40-80 links / month, about 2 hr / month. Links will be submitted both by individual users and by “foragers” that are created by Outlearn and automatically pull candidate links from sources such as Reddit, Hacker News, newsletters, blogs, etc. This is the first task because we want to review the links submitted by users as quickly as possible. If each curator reviews links a few times a week, the turnaround time will be short.
+1. **Review links**. About 100 links / month, about 3 hr / month. Links will be submitted both by individual users and by “foragers” that are created by Outlearn and automatically pull candidate links from sources such as Reddit, Hacker News, newsletters, blogs, etc. This is the first task because we want you to review the links submitted by users as quickly as possible. If each curator reviews links a few times a week, the turnaround time will be short.
 
-2. **Submit links**. About 15 links / month, about 2 hr / month. We will not get all the great content from our users and the automated foragers. We rely on you to take a look at the big picture of the topic and add in any awesome content that has come out during a given week. Ideally, this can happen in the middle of any other activities that you are doing because you will come across awesome resources throughout the day. We will feature your profile image next to links that you submit.
+2. **Submit links**. If you see any awesome content that's not in the catalog, please add it in. In the future, we may feature your profile image next to links that you submit.
 
-3. **Create Learning Paths**. One Path / month, about 2 hr / month. Paths take a collection of Link Modules and combine them in ways that is more than the sum of the parts. Possible Path ideas include:
+3. **Create Learning Paths**. About 1-2 paths / month, about 2-4 hr / month. Learning Paths take a collection of Modules and combine them in ways that is more than the sum of the parts. Some Modules will come from the catalog and others will be written by you. Paths adds the most value to learners so try to **maximize the amount of time spent building paths**. Possible Path ideas include:
     * Comparison of different libraries for a given task
     * Common mistakes to avoid when doing X
     * Pro tips when doing Y
     * All the talks in a conference
 
-4. **Tweet**. At least one tweet / week, less than 1 hr / month. When you find awesome resources, we would like you to tweet out links to them on Outlearn. This works especially well for Paths that you and others have created but applies also to links that you would recommend to others.
+4. **Social Media**. At least one message / week, less than 1 hr / month. When you create learning paths, please share them on networks that you already use, such as Twitter, Reddit, Hacker News etc. If you share on Reddit, remember that their rule for self-promotion is no more than 10% of your submissions.
 
 <!-- @section -->
 
@@ -92,10 +92,8 @@ In addition to the recurring curations activities, there are a few one-time task
 
 The best way for you to talk about anything related to curation is in the [Outlearn Curators Slack group](https://outlearn.slack.com/messages/curators/). This group is shared by all the Outlearn curators and is ideal for us to figure out best practices for curation and sharing what we're learning. If you have a question or a comment, Slack is a good default. Typical discussion topics will include:
 
-* Good ways to identify awesome links to submit
+* Best practices for creating awesome Paths
 * Criteria for reviewing links, including tagging and featuring
 * Feedback on the admin interface or the site in general
 
 Getting to talk in real time is also powerful so we plan on talking with individual curators every once in a while to get your thoughts and feedback in a more high-bandwidth setting.
-
-Finally, you can <a id="TeppoMail" href="mailto:teppo@outlearn.com" target="_blank">email Teppo</a>.

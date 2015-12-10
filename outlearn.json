@@ -4,7 +4,7 @@
   "paths" : [
     {
       "name" : "outlearn-curating",
-      "title" : "Curating Awesomeness - Confidential",
+      "title" : "Curating Awesomeness",
       "description" : "Check out Outlearn's vision for awesome developer learning and see how we can build a community that lets developers discover and learn the best stuff wherever it is.",
       "coverImage" : "https://raw.githubusercontent.com/outlearn-content/assets/master/new-york.jpg",
       "collaborationChannel" :	"https://outlearn.slack.com/messages/curators/",

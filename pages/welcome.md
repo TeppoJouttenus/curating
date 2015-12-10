@@ -10,3 +10,5 @@ Let’s get started!
 Teppo  
 
 <img src="https://raw.githubusercontent.com/outlearn-content/assets/master/teppo.jpg" alt="Teppo" style="width:250px;height:250px" align="left">
+
+<br clear="all">
