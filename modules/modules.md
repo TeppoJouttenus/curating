@@ -124,7 +124,7 @@ The workflow for submitting links is the same for users and curators. You have t
 
 <!-- @section -->
 
-# FAQs About What to Include
+# FAQ - What to Include in the Catalog
 
 This is an evolving list based on questions asked by curators. If you don't find an answer here, go ahead and ask in Slack.
 
