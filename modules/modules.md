@@ -15,7 +15,7 @@
 
 Best learning is customized based on the needs of individuals and teams. Current learning solutions make that much harder than it should be. Outlearn unleashes customization through Modules that any developer or manager can assemble to Learning Paths. You are right now viewing a Module called "Finding and Reviewing Links" and you may be seeing it on its own or as part of a Path. This is a native Module where all the content is hosted on Outlearn so it can contain enrichments like sections and tasks.
 
-Outlearn also supports "Link Modules" which are created from links submitted to the platform. They pull some key information from the link target and add in a screenshot to make it easy to see what the link is all about. We expect that early on there will be much more Link Modules than native Modules. We want to make Outlearn such an attractive publishing platform that longer term lots of developer authors want to publish native here.
+Outlearn also supports "Link Modules" which are created from links submitted to the platform. They pull some key information from the link target and add in a screenshot to make it easy to see what the link is all about. We expect that early on there will be much more Link Modules than native Modules. However, we want to make Outlearn such an attractive publishing platform that longer term lots of developer authors want to publish natively here.
 
 As an expert in your topic area, you have a natural sense of what makes a resource awesome for professional developers. That's the number one criteria for you to follow when deciding what to include. We want all the best resources for a given topic to be included in our topic streams. When evaluating a link, please consider whether it has:
 
