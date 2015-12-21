@@ -43,7 +43,7 @@ We are currently staying focused on technical resources so we will not include d
 
 # Review Links
 
-When you review links you should check if the original content is valuable and if our platform turned the link into an Outlearn module correctly so that the title, description, and screenshot are reasonable. Out end goal is to have new content appear in the catalog as quickly after publication as possible. We would love for you to review links several times a week.
+When you review links you should check if the original content is valuable and if our platform turned the link into an Outlearn module correctly so that the title, description, and screenshot are reasonable. Our end goal is to have new content appear in the catalog as quickly after publication as possible. We would love for you to review links several times a week.
 
 In this Learning Path we will often use words link and Module interchangeable because each submitted link is turned into a module that either gets accepted or rejected. So reviewing links or Modules means the same thing.
 
