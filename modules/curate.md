@@ -51,6 +51,8 @@ Our plan is to have 2-3 curators for each topic stream. The estimated effort bel
 
 4. **Social Media**. At least one message / week, less than 1 hr / month. When you create learning paths, please share them on networks that you already use, such as Twitter, Reddit, Hacker News etc. If you share on Reddit, remember that their rule for self-promotion is no more than 10% of your submissions.
 
+    Twitter gives us higher quality traffic than almost any other channel. When you find a cool link while reviewing, you can tweet a link to the original and also add "via @outlearn" at the end. That highlights that you found the linkn through your work with Outlearn. For an example, see here: https://twitter.com/code_barbarian/status/687286884872093702
+
 <!-- @section -->
 
 # Getting Set Up
