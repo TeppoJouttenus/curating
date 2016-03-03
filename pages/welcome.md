@@ -4,7 +4,7 @@ Welcome, it’s great to have you on board as an Outlearn content curator. This 
 
 Please keep the information in this Path confidential. It contains a lot of details about how we identify the best stuff on the web and create powerful Learning Paths.
 
-We will polish the curation process as we go along so this Path will keep on evolving. Please feel free to send questions, comments, and improvements over <a id="TeppoMail" href="mailto:teppo@outlearn.com" target="_blank">email</a> or [Slack](https://outlearn.slack.com/messages/curators/).
+We will polish the curation process as we go along so this Path will keep on evolving. Please feel free to send questions, comments, and improvements over [Slack](https://outlearn.slack.com/messages/curators/).
 
 Let’s get started!  
 Teppo  

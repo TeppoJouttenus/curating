@@ -17,15 +17,15 @@ Before we jump into the details, we want to explain what we’re aiming for with
 
 Outlearn is focused on serving professional software developers. We are explicitly NOT focused on people who are learning to code for the first time. We're all about the pros, and our content should reflect that.
 
-There are lots of websites and newsletters covering great learning resources for pro developers. But, in our experience, none of them really gather all the best stuff in one place on an on-going basis. That's what we're building with our Outlearn topic streams.
+There are lots of websites and newsletters covering great learning resources for pro developers. But, in our experience, none of them really gather all the best stuff in one place on an on-going basis. And they don't organize it across different sources. That's what we're building with our Outlearn topic streams.
 
-We want every Outlearn topic stream to be the best place to get up to speed and stay up to speed on the topic in question. If there is a learning resource on the web that pro devs interested in topic X really must know about, it HAS to be there in the Outlearn topic stream for X.
+We want every Outlearn topic stream to be the best place to get up to speed and stay up to speed on the topic in question. If there is a learning resource on the web that pro devs interested in topic X really must know about, it HAS to be there in the Outlearn topic stream for X. We then take the most interesting resources and turn them into customized playlists that we call Learning Paths. These Paths also have lots of enrichments to make the content super engaging and easy to apply.
 
 Your job as a curator is to deliver on this vision by creating a superior content discovery experience for pro developers. It's about breadth, depth, relevance, and freshness. If your topic area is indisputably superior to all other web destinations on all these dimensions, you're doing a great job.
 
 <!-- @task, "hasDeliverable" : true, "text" : "What websites or services do you personally use to find awesome content? List as many as you want." -->
 
-When a developer comes to Outlearn, we want them to get an immediate sense that Outlearn has all the new “must read” content for the topics covered in our streams. In addition, users must be able to find most of the good content for each topic stream as that content gets published around the web. Because of this, the developers can let go of the fear of missing out. If they visit a topic stream weekly, they can spend 5-10 minutes skimming all the new content and make sure they are not missing anything important that could help them in their work or other projects.
+When a developer comes to Outlearn, we want them to get an immediate sense that Outlearn has all the new “must read” content for the topics covered in our streams and great Paths that add practical narratives around that content. Users must be able to find lot of the good content for each topic stream as that content gets published around the web. Because of this, the developers can let go of the fear of missing out. If they visit a topic stream weekly, they can spend 5-10 minutes skimming all the new content and make sure they are not missing anything important that could help them in their work or other projects.
 
 <!-- @task, "hasDeliverable" : true, "text" : "For the topic streams that you will curate, how many must-read items do you think are published on the web in an average week? No need to be precise but we'd love to get your gut sense." -->
 
@@ -33,17 +33,17 @@ When a developer comes to Outlearn, we want them to get an immediate sense that 
 
 # Tasks
 
-Below are the different tasks for you to do as a curator. Each has estimates for the required time and volume of output. They are meant to give you something to start with but we know that you are responsible professionals and will use your time well. So don't feel too constrained by our estimates.
+Below are the different tasks for you to do as a curator. Each has estimates for the required time and volume of output but we know that you are responsible professionals and will use your time well. So don't feel too constrained by our estimates.
 
 > Please let us know whenever you have ideas on how to best achieve an awesome discovery experience.
 
 Our plan is to have 2-3 curators for each topic stream. The estimated effort below is for one curator.
 
-1. **Review links**. About 100 links / month, about 3 hr / month. Links will be submitted both by individual users and by “foragers” that are created by Outlearn and automatically pull candidate links from sources such as Reddit, Hacker News, newsletters, blogs, etc. This is the first task because we want you to review the links submitted by users as quickly as possible. If each curator reviews links a few times a week, the turnaround time will be short.
+1. **Review links**. About 50-100 links / month, about 1-2 hr / month. Candidate links will come from sources such as Reddit, Hacker News, newsletters, blogs, etc.
 
-2. **Submit links**. If you see any awesome content that's not in the catalog, please add it in. In the future, we may feature your profile image next to links that you submit.
+2. **Submit links**. If you come across any awesome content that's not in the catalog, please [add it in](https://www.outlearn.com/links/contribute). In the future, we may feature your profile image next to links that you submit.
 
-3. **Create Learning Paths**. About 1-2 paths / month, about 2-4 hr / month. Learning Paths take a collection of Modules and combine them in ways that is more than the sum of the parts. Some Modules will come from the catalog and others will be written by you. Paths adds the most value to learners so try to **maximize the amount of time spent building paths**. Possible Path ideas include:
+3. **Create Learning Paths**. About 1-3 paths / month, about 2-7 hr / month. Learning Paths take a collection of Modules and combine them in ways that is more than the sum of the parts. Some Modules will come from the catalog and others will be written by you. Paths adds the most value to learners so try to **maximize the amount of time spent building paths**. Possible Path ideas include:
     * Comparison of different libraries for a given task
     * Common mistakes to avoid when doing X
     * Pro tips when doing Y
