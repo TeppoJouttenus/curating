@@ -1,1 +1,1 @@
-# Repo for private Outlearn content
+# Outlearn Curating Path
